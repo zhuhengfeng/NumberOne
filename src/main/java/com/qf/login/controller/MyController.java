@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MyController {
     @RequestMapping(value="/{path}", method= RequestMethod.GET)
     public String toindex(@PathVariable String path){
-        return path;
+        return "index"+"/"+path;
     }
+
+
 }

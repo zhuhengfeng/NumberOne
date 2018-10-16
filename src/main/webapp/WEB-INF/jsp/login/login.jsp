@@ -14,9 +14,10 @@
   <meta http-equiv="Cache-Control"  content="no-transform">
   <meta name="Generator" content="chanzhi3.1 www.chanzhi.org">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>招贤纳士 - 南京华苏科技有限公司</title>
+  <title>OA入口选择 - 南京华苏科技有限公司</title>
   <meta name='keywords' content=' 华苏科技有限公司,华苏科技,华苏,南京华苏,网优,网络优化,软件开发,大数据,软件定制,管理系统,huasu,howso,系统集成'>
-  <meta name='description' content='招贤纳士,招聘'>
+  <meta name='description' content='南京华苏科技有限公司官网。诚信,责任,专业,专注。
+'>
   <script language='Javascript'>var config={"webRoot":"\/","cookieLife":30,"requestType":"PATH_INFO","requestFix":"-","moduleVar":"m","methodVar":"f","viewVar":"t","defaultView":"html","themeRoot":"\/theme\/","currentModule":"page","currentMethod":"view","clientLang":"zh-cn","requiredFields":"","save":"\u4fdd\u5b58","router":"\/index.php","runMode":"front"}
   </script>
   <link rel='stylesheet' href='css/all_1.css' type='text/css' media='screen' />
@@ -352,76 +353,28 @@
   </div>
   <div class='collapse navbar-collapse' id='navbarCollapse' style='margin-top:16px;'>
     <ul class='nav navbar-nav'>
-      <li class='nav-system-home'><a href='/' style="line-height:0px;padding-top:26px;padding-bottom:30px;">首页</a>
+      <li class='nav-system-home'><a href='${pageContext.request.contextPath}/index' style="line-height:0px;padding-top:26px;padding-bottom:30px;">首页</a>
       </li>
       <li class="dropdown ">
-        <a href='' class="dropdown-toggle" style="line-height:0px" data-toggle="dropdown" >走进华苏 <b class='caret' style=''></b></a>
+        <a href='' class="dropdown-toggle" style="line-height:0px" data-toggle="dropdown" >心路历程 <b class='caret' style=''></b></a>
         <ul class='dropdown-menu' role='menu'>
-          <li class='nav-system-company'><a href='/company/' >关于我们</a>
+          <li class='nav-system-company'><a href='${pageContext.request.contextPath}/news' >忆往昔</a>
           </li>
-          <li class='nav-page-2'><a href='/page/HowsoStory.html' >华苏故事</a>
+          <li class='nav-page-2'><a href='${pageContext.request.contextPath}/news' >看今朝</a>
           </li>
-          <li class='nav-page-10'><a href='/page/Honor.html' >资质荣誉</a>
-          </li>
-          <li class='nav-page-14'><a href='/page/ClientMap.html' >客户地图</a>
-          </li>
-          <li class='nav-article-7'><a href='/stafStyle.html' >员工风采</a>
-          </li>
-          <li class='nav-page-7'><a href='/page/ContactUs.html' >联系我们</a>
-          </li>
-          <!-- end nav2 -->
-        </ul>
+
       </li>
-      <li class='nav-article-0'><a href='/article/' style="line-height:0px;padding-top:26px;padding-bottom:30px;">新闻资讯</a>
-      </li>
-      <li class="dropdown ">
-        <a href='' class="dropdown-toggle" style="line-height:0px" data-toggle="dropdown" >产品与解决方案 <b class='caret' style=''></b></a>
-        <ul class='dropdown-menu' role='menu'>
-          <li class='nav-page-300'><a href='/page/300.html' >解决方案</a>
-          </li>
-          <li class='dropdown-submenu nav-page-100'>
-            <a href='/page/softwareProduct.html' >软件产品</a>
-            <ul class='dropdown-menu' role='menu'>
-              <li><a href='/page/RJDZ.html' >软件定制服务</a>
-              </li>
-              <li><a href='/page/DEEPLAN.html' >DEEPLAN移动网络深度挖掘系统</a>
-              </li>
-              <li><a href='/page/iKMS.html' >智能知识管理系统</a>
-              </li>
-              <li><a href='/page/GIS.html' >GIS定制化</a>
-              </li>
-              <li><a href='/page/ZCGL.html' >基于RFID的资产管理系统</a>
-              </li>
-              <li><a href='/page/RFID.html' >基于RFID的室分管控物联网系统</a>
-              </li>
-              <li><a href='/page/CLMS.html' >车辆管理系统</a>
-              </li>
-              <li><a href='/page/iNos.html' >iNos-智能优化系统</a>
-              </li>
-              <li><a href='/page/DWRS.html' >多网融合综合呈现系统</a>
-              </li>
-              <li><a href='/page/QYZH.html' >企业综合管理平台</a>
-              </li>
-              <li><a href='/page/YDTS.html' >移动网络投诉处理解决方案</a>
-              </li>
-            </ul>
-          </li>
-          <li class='nav-page-217'><a href='/page/217.html' >EMC介绍</a>
-          </li>
-          <!-- end nav2 -->
-        </ul>
-      </li>
-      <li class="dropdown ">
-        <a href='' class="dropdown-toggle" style="line-height:0px" data-toggle="dropdown" >投资者关系 <b class='caret' style=''></b></a>
-        <ul class='dropdown-menu' role='menu'>
-          <li class='nav-page-9'><a href='/page/CorporateGovernance.html' >公司治理</a>
-          </li>
-          <!-- end nav2 -->
-        </ul>
-      </li>
-      <li class='nav-page-8'><a href='/page/JoinUs.html' style="line-height:0px;padding-top:26px;padding-bottom:30px;">招贤纳士</a>
-      </li>
-      <!-- end nav1 -->
+      <!-- end nav2 -->
+    </ul>
+    <li class='nav-article-0'><a href='${pageContext.request.contextPath}/product' style="line-height:0px;padding-top:26px;padding-bottom:30px;">产品介绍</a>
+    </li>
+    <li class='nav-article-0'><a href='${pageContext.request.contextPath}/product' style="line-height:0px;padding-top:26px;padding-bottom:30px;">网络调查</a>
+    </li>
+    <li class='nav-page-8'><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">招贤纳士</a>
+    </li>
+    <li class='nav-page-8'><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">购物车</a>
+    </li>
+    <!-- end nav1 -->
     </ul>
   </div>
 </nav>
@@ -446,256 +399,40 @@
   <div class='page-wrapper'>
     <div class='page-content'>
       <script language='javascript'>$(function() {$(".tree").treeview({collapsed: false, unique: false}) })</script>
-      <script language='Javascript'>v.pageID = 8;</script>
-      <style>/*** 招贤纳士***/
-
-      /* 框架内容页上面蓝色条*/
-      .article-content { border: 3px solid #fff; border-top: 3px solid #1F85D0;}
-
-      #joinus { font-family: &quot;微软雅黑&quot;;font-size:14.7px;min-height: 600px;}
-      #joinus .resume_link { font-family: &quot;微软雅黑&quot;; font-size: 16px; line-height:200%; position:absolute; top: 10px; right: 100px; }
-      #joinus .resume_link span { display: block;  width: 100%; height:100%; padding:10px; text-decoration:underline; }
-      #joinus .resume_link span:hover,#joinus .resume_link span:foucs { }
-      #joinus .h3 { /* font-size:18px; line-height: 180%; */margin-bottom: 20px;}
-      #joinus .h4 {  font-size:14.7px; font-weight: bold;}
-
-      #joinus #leftNav { display: block; float: left; margin-left:5%; min-width: 150px; width:22%;}
-      #joinus #leftNav ul li { font-size: 16px;color: #fff; margin: 1px 0;}
-      #joinus #leftNav ul li span.zpnava{ display:block; padding : 0 5%;line-height: 240%; color: #fff; background-color:#939DA7; }
-      #joinus #leftNav ul li span.zpnava:link{ text-decoration: none; }
-      #joinus #leftNav ul li span.zpnava:visited{ background-color:#ADAFB1;}
-      #joinus #leftNav ul li span.zpnava:hover{ background-color:#1A8AD5;}
-      #joinus #leftNav ul li span.zpnava:active{ background-color:#1A8AD5;}
-
-
-      #joinus #leftNav ul li span .navText { display: inline-block; margin: 0 0 0 8%; min-width:100px;width:80%;}
-      #joinus #leftNav ul li span .icongt { font-weight:bolder;}
-
-      #joinus #rightCon { display: block; margin-left: 8%; float: left; min-width: 200px; width:60%; line-height: 160%;color:#777}
-      #joinus #rightCon .h3{ border-left: 5px solid #1A8AD5; padding-left: 1%;}
-      #joinus #rightCon .h4 { }
-      #joinus #rightCon .lineStyle {border-top: 1px dashed #777; margin:20px 0;}</style><script language='Javascript'>$(function(){
-      //初始化时隐藏所有，显示右边第一个
-      showThis('#rightCon',0);
-      //遍历链接按钮，绑定click事件
-      $('#leftNav li span.zpnava').each(function(i){
-        $(this).bind('mouseover click', function(){
-          showThis('#rightCon',i);
-        });
-      });
-
-    });
-    /* 右边切换 */
-    function showThis(JQobj,num){
-      //左边导航样式
-      $('#leftNav li a').css({'background-color':'#ADAFB1'});//link
-      $('#leftNav li a').eq(num).css({'background-color':'#1A8AD5'});//hover
-      //右边切换效果
-      var obj = $(JQobj);
-      obj.find('.showblock').hide();
-      var showObj = obj.find('.showblock').eq(num);
-      if(showObj.length==1){
-        showObj.show();
-        //showObj.slideDown('fast');//滑动
-      } else {
-        alert('后台有错，左边导航和右边内容不匹配，请每一个导航对应右边一个内容');
-        showObj = obj.find('.showblock').eq(0);
-        showObj.show();
-        //showObj.slideDown('fast');//滑动
-      }
-    }
+      <script language='Javascript'>v.pageID = 227;</script>
+      <style></style><script language='Javascript'>
     </script>
       <ul class="breadcrumb"><li><span class='breadcrumb-title'>当前位置：</span><a href='/' >首页</a>
-      </li><li>招贤纳士</li></ul><div class='row'>
+      </li><li>OA入口选择</li></ul><div class='row'>
       <div class='col-md-12'>
         <div class='article'>
           <!-- delete by liulang begin
         <header>
-          <h1>招贤纳士</h1>
+          <h1>OA入口选择</h1>
         </header>
         end -->
           <section class='article-content'>
-            <div id="joinus"><div class="resume_link"><a href="http://search.51job.com/list/co,c,1997504,000000,10,1.html" target="_blank">我要投简历</a></div>
-              <div id="leftNav"><ul class="ulnone"><li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/12.html' class='tag-link'>无线网络优化</a>
-<a href='http://www.howso.cn/product/14.html' class='tag-link'>工程</a>
-师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/13.html' class='tag-link'>GSM</a>
-<a href='http://www.howso.cn/product/12.html' class='tag-link'>优化</a>
-工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/13.html' class='tag-link'>CDMA</a>
-网优工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/13.html' class='tag-link'>WCDMA</a>
-网优工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/13.html' class='tag-link'>TD</a>
-优化工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText">Java中高级工程师</span><span class="icongt">&gt;</span></a></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/11.html' class='tag-link'>IOS</a>
-开发工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText">Android开发工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText">GIS软件开发工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText">培训讲师</span><span class="icongt">&gt;</span></span></li>
-              </ul>
-              </div>
-              <div id="rightCon"><div class="showblock"><div class="h3">职位描述</div>
-                <div class="h4">工作职责:</div>
-                <ul class="ulnone"><li>1. 运用路测软件和OMC数据进行网络分析，对无线网络提出评估性优化建议。</li>
-                  <li>2. 负责网络性能报表统计与分析，并提出优化建议及<a href='http://www.howso.cn/product/14.html' class='tag-link'>实施</a>
-                    跟踪。</li>
-                  <li>3. 对各项优化建议进行落实，完成各项无线网络优化工作。</li>
-                  <li>4. 协助项目团队完成网络优化工作。</li>
-                  <li>5. 配合当地项目经理安排的其他事务。</li>
-                </ul>
-                <div class="lineStyle"></div>
-                <div class="h4">岗位要求：</div>
-                <ul class="ulnone"><li>1. 通信、微波、无线传播、电子通信或计算机相关专业本科毕业生。</li>
-                  <li>2. 责任心强，工作踏实，思维敏捷，品行端正，有良好的沟通协调能力和环境适应能力。</li>
-                  <li>3. 能适应长较强的工作压力。</li>
-                  <li>4. 熟悉计算机操作，熟练运用WORD、EXCEL等软件的使用。</li>
-                  <li>5. 有相关工作经验者优先。</li>
-                </ul>
-              </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 具有良好的移动通信知识，熟悉GSM产品原理、信令流程、通信协议、电磁理论、无线通信等。</li>
-                    <li>2. 至少1年的<a href='http://www.howso.cn/product/12.html' class='tag-link'>无线网络规划</a>
-                      和优化的实际工作经验。</li>
-                    <li>3. 良好的沟通技巧和团队协作能力。</li>
-                    <li>4. 有华为、中兴上岗证或者参加过相关技术培训，有两年以上网优经验，担当项目TL者优先。</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 大专以上学历，通信、电子、计算机等相关专业。</li>
-                    <li>2. CDMA网规网优2年以上经验，MOTOROLA 、爱立信、 中兴 、华为、 朗讯 、北电 或 三星 CDMA网规网优2年以上经验，参与过大中城市的CDMA网络优化工作。</li>
-                    <li>3. 精通CDMA系统各协议，熟练掌握信令流程分析，具有丰富的解决问题的能力，并且能够指导他人工作。</li>
-                    <li>4. 熟悉网络系统参数原理、配置、调整、提取等内容。</li>
-                    <li>5. 丰富的RF优化经验，对网规网优工具和软件熟练应用，如：cait、actix、mapinfo、话统分析、参数分析等。</li>
-                    <li>6. 此岗位需要全部出差。</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">工作职责:</div>
-                  <ul class="ulnone"><li>1. 独立运用路测软件和OMC数据进行网络分析，对无线网络提出评估性优化建议。</li>
-                    <li>2. 对一系列可行性优化建议进行落实，完成无线网络优化工作。</li>
-                    <li>3. 和客户有良好的沟通，有项目风险正确识别和处理能力，带领整个团队完成优化工作。</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">岗位要求：</div>
-                  <ul class="ulnone"><li>1. 相关专业专科以上学历。</li>
-                    <li>2. 具备良好的移动通信知识，熟悉GSM或WCDMA产品原理、信令流程、通信协议、电磁理论、无线传播、天线系统等。</li>
-                    <li>3. 至少两年的无线网络规划和网络优化的实际工作经验，至少1年的后台系统分析经验。不符合请勿投。</li>
-                    <li>4. 良好的沟通技巧和团队协作能力，能适应长期的差旅生活。</li>
-                    <li>5. 要求有无线通信、微波、无线传播、天线、电子通信或相关专业的大专以上学历。</li>
-                    <li>6. 爱立信、卡特、华为、中兴、摩托等设备厂家G网和WCDMA双网都有系统优化经验者，优先考虑。</li>
-                    <li>7. 有华为、中兴上岗证或者参加过相关技术培训，有三年以上网优经验，担当项目TL，优先考虑。</li>
-                    <li>8. 英语良好者者优先考虑。</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">工作职责:</div>
-                  <ul class="ulnone"><li>1. 独立运用鼎立路测软件和OMC/LMT数据进行网络分析（华为、中兴、大唐），对无线网络提出评估性优化建议。</li>
-                    <li>2. 对一系列优化建议进行调整落实，完成无线网络优化工作。</li>
-                    <li>3. KPI指标监控、TOPN 小区问题处理，配合完成各种<a href='http://www.howso.cn/product/13.html' class='tag-link'>专项优化</a>
-                      任务。</li>
-                    <li>4. 和客户之间有良好的沟通，能够正确识别项目风险并处理，带领整个团队完成优化工作。</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">岗位要求：</div>
-                  <ul class="ulnone"><li>1. 本科以上学历，需要通过英语四级。大专学历需要有二年以上工作经验。不符合请勿投。</li>
-                    <li>2. 具备良好的移动通信知识，熟悉华为/大唐/中兴/爱立信TD-<a href='http://www.howso.cn/product/13.html' class='tag-link'>SCDMA</a>
-                      产品原理、指标（KPI）及计数器定义、信令流程、通信协议、电磁理论、无线传播、天线系统等。</li>
-                    <li>3. 至少两年厂商设备的无线网络规划和网络优化的实际工作经验，参与过厂商或者移动比较大型的优化项目，至少1年的后台系统分析经验或2年的前台分析优化经验。</li>
-                    <li>4. 良好的沟通技巧和团队协作能力，能适应长期的差旅生活。</li>
-                    <li>5. 有华为、中兴上岗证或者参加过相关技术培训，有三年以上网优经验，担当项目TL，有过专项优化，优先考虑。</li>
-                    <li>6. 同时具备其他厂家GSM网优经验者优先</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 计算机或相关专业本科以上学历。</li>
-                    <li>2. 3年以上的J2EE开发工作经验、1年以上的系统架构设计经验；精通面向对象设计思想，具有扎实的Java编程功底和良好的编码规范。</li>
-                    <li>3. 精通项目开发过程中的各个阶段的任务及其输出物。</li>
-                    <li>4. 精通Struts,spring,hibernate,ibatis等常用框架。</li>
-                    <li>5. 熟悉Tomcat、Jboss、weblogic、apache等多种应用和WEB服务器的配置。</li>
-                    <li>6. 有丰富的数据库设计经验，精通sql语言，并熟悉Oracle、Mysql数据库系统。</li>
-                    <li>7. 对系统架构设计有一定的理解，熟练HTML语言、JavaScript脚本语言、XML语言 ，了解当前流行的javascript开源框架。。</li>
-                    <li>8. 工作主动性强，耐心细致，有责任心；能承受一定压力，有良好的沟通能力与团队合作精神。</li>
-                    <li>9. 有通信行业工作经验者优先。</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">岗位职责 :</div>
-                  <ul class="ulnone"><li>1. 根据需求完成iOS应用开发任务。</li>
-                    <li>2. 了解底层接口开发。</li>
-                    <li>3. 负责编写和<a href='http://www.howso.cn/product/14.html' class='tag-link'>维护</a>
-                      设计文档。</li>
-                    <li>4. 负责执行单元自测，并与测试人员共同做好质量控制。</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 本科以上学历，计算机及电子信息相关专业</li>
-                    <li>2. 了解底层接口开发</li>
-                    <li>3. 精通项目开发过程中的各个阶段的任务及其输出物</li>
-                    <li>4. 精通Objective-C，精通IOS SDK中的UI、网络、数据库、JSON解析等开发技巧</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">能力要求 :</div>
-                  <ul class="ulnone"><li>1. 熟练使用iPhone SDK、XCode、Interface Builder等开发工具 ，熟练掌握常用API。丰富的Objective-C经验，熟悉设计模式，能够设计灵活的iOS产品架构，熟悉iPhone/iPad各个版本之间的差异，并且能够提供良好的解决方案。</li>
-                    <li>2. 精通Socket通信、TCP/IP和XML等网络协议，熟悉多线程及面向对象编程，熟悉SQLite数据库编程。</li>
-                    <li>3. 熟练使用Xcode的Instrument来诊断和调试问题，熟练编写Xcode下的单元测试。了解Xcode下的自动化测试。</li>
-                    <li>4. 能独立承担开发高性能的iOS应用，熟练掌握多线程程序设计技术，iOS平台UI、线程、消息和进程通信机制。</li>
-                    <li>5. 有app store线上作品者、熟悉<a href='http://www.howso.cn/product/11.html' class='tag-link'>移动互联网</a>
-                      、有Scrum敏捷开发经验优先。</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">岗位职责 :</div>
-                  <ul class="ulnone"><li>1. 负责Android客户端软件的架构设计、开发和维护。</li>
-                    <li>2. 规范编写设计和维护文档。</li>
-                    <li>3. 独立完成移动终端产品应用的功能模块开发，独立解决问题。</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 精通Java开发语言和Android平台UI，熟练运用eclipse/ADT开发工具。</li>
-                    <li>2. 精通网络开发（<a href='http://www.howso.cn/product/13.html' class='tag-link'>GPRS</a>
-                      、3G、Wifi），在上述不同网络环境下与后台服务进行各种类型数据交互。</li>
-                    <li>3. 熟悉Android 端sqllite的应用，有sqllite与服务端数据同步经验。</li>
-                    <li>4. 具备良好的职业素养和团队协作精神，以及较强的学习能力，可独立承担开发任务</li>
-                    <li>5. 优先考虑有监控软件设计开发经验的人员</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 计算机软件、地理信息系统、遥感等相关专业毕业，专科及以上学历。</li>
-                    <li>2. 2年以上GIS开发工作经验。</li>
-                    <li>3. 熟练使用主流GIS平台软件，如ArcGIS等，有二次开发经验。</li>
-                    <li>4. 熟练使用Arc map工具、熟练AE开发流程、熟练基于flex的WEBGIS开发</li>
-                    <li>5. 熟悉Oracle等大型数据库及SQL语言</li>
-                    <li>6. 熟悉 javascript、html、css</li>
-                    <li>7. 工作积极主动，沟通协调能力强，具备良好的职业道德意识与团队合作精神</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">岗位职责 :</div>
-                  <ul class="ulnone"><li>1. 制定公司培训工作规范、流程和培训方案。</li>
-                    <li>2. 调查培训需求，编制、调整、执行培训计划</li>
-                    <li>3. 开发培训课程，编制培训课件和建立企业培训资料库</li>
-                    <li>4. 讲授培训课程，解答疑难问题等</li>
-                    <li>5. 撰写培训报告，反馈、评估培训效果</li>
-                    <li>6. 跟进培训工作效果对培训工作进行改进</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 三年以上通信工作经验，一年以上培训管理相关工作经验优先，常驻地南京或需短期出差。</li>
-                    <li>2. 熟悉相关业务，熟练使用现代培训工具，具备较强课程研发能力、良好的演讲能力。</li>
-                    <li>3. 富有激情，较强的亲和力和感染力、良好的文字和语言表达能力、沟通能力，思维敏捷。</li>
-                    <li>4. 熟练使用办公软件，可制作课件。</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="clear"></div>
-            </div>
-            <div class="clear"></div>      </section>
+            <p><br />
+            <table style="width:100%;height:400px;" cellpadding="0" cellspacing="0" border="0" class="ke-zeroborder" bordercolor="#000000"><tbody><tr><td style="text-align:center;vertical-align:middle;"><p><br />
+            </p>
+              <h1 style="color:#333333;text-align:center;"><span style="font-size:18px;">旧OA登录&nbsp;</span><span style="font-size:18px;"><a href="http://223.68.137.152:8800" target="_blank">移动入口</a></span><span style="line-height:1.53846;background-color:transparent;font-size:18px;">&nbsp;&nbsp;| &nbsp;</span><span style="font-size:18px;"><a href="http://49.74.219.10:8800/" target="_blank">电信入口</a></span></h1>
+              <p><br />
+              </p>
+              <p><br />
+              </p>
+              <h1 style="color:#333333;text-align:center;"><span style="font-size:18px;">新OA登录&nbsp;</span><span style="font-size:18px;"><a href="http://223.68.137.152:8808" target="_blank">移动入口</a></span><span style="line-height:1.53846;background-color:transparent;font-size:18px;">&nbsp;&nbsp;| &nbsp;</span><span style="font-size:18px;"><a href="http://49.74.219.10:8808/" target="_blank">电信入口</a></span></h1>
+              <p><br />
+              </p>
+              <p><span style="font-size:18px;font-family:&quot;font-weight:700;background-color:transparent;">（旧OA系统将于2017年12月31关闭使用）</span></p>
+              <p><br />
+              </p>
+              <p><a href="http://http://49.74.219.10:8800/"></a></p>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </p>
+            <br />      </section>
           <section>
           </section>
           <footer>
@@ -710,21 +447,11 @@
 
             <span class="tlinka service_hotline" ></span>
 
-            <a class="tlinka" href="http://www.howso.cn/page/OAweb.html" target="_black" >
-              OA登录<span class="tlinkaline" >|</span>
+            <a class="tlinka" href="${pageContext.request.contextPath}/login" target="_black">
+              用户登录<span class="tlinkaline" >|</span>
             </a>
-
-            <a class="tlinka" href="http://mail.howso.cn:6080" target="_black">
-              企业邮箱<span class="tlinkaline" >|</span>
-            </a>
-
-            <a class="tlinka" href="http://howso.hongsong.cn/com/ctrl/index" target="_black" >
-              iKMS<span class="tlinkaline"  >|</span>
-            </a>
-
-
-            <a class="tlinka"  href="http://47.99.86.222:8888" target="_black">
-              ePMS<span class="tlinkaline"  >|</span>
+            <a class="tlinka" href="${pageContext.request.contextPath}/reg" target="_black" >
+              用户注册<span class="tlinkaline" >|</span>
             </a>
 
 

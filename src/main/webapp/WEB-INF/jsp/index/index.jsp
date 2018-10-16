@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: asus
   Date: 2018/10/15
-  Time: 17:11
+  Time: 17:06
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -14,27 +14,28 @@
   <meta http-equiv="Cache-Control"  content="no-transform">
   <meta name="Generator" content="chanzhi3.1 www.chanzhi.org">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>软件产品 - 南京华苏科技有限公司</title>
-  <meta name='keywords' content='软件产品,软件,产品 华苏科技有限公司,华苏科技,华苏,南京华苏,网优,网络优化,软件开发,大数据,软件定制,管理系统,huasu,howso,系统集成'>
-  <meta name='description' content='华苏软件产品'>
-  <script language='Javascript'>var config={"webRoot":"\/","cookieLife":30,"requestType":"PATH_INFO","requestFix":"-","moduleVar":"m","methodVar":"f","viewVar":"t","defaultView":"html","themeRoot":"\/theme\/","currentModule":"page","currentMethod":"view","clientLang":"zh-cn","requiredFields":"","save":"\u4fdd\u5b58","router":"\/index.php","runMode":"front"}
+  <title>南京华苏科技有限公司</title>
+  <meta name='keywords' content='华苏科技有限公司,华苏科技,华苏,南京华苏,网优,网络优化,软件开发,大数据,软件定制,管理系统,huasu,howso,系统集成'>
+  <meta name='description' content='南京华苏科技有限公司官网。诚信,责任,专业,专注。
+'>
+  <script language='Javascript'>var config={"webRoot":"\/","cookieLife":30,"requestType":"PATH_INFO","requestFix":"-","moduleVar":"m","methodVar":"f","viewVar":"t","defaultView":"html","themeRoot":"\/theme\/","currentModule":"index","currentMethod":"index","clientLang":"zh-cn","requiredFields":"","save":"\u4fdd\u5b58","router":"\/index.php","runMode":"front"}
   </script>
   <link rel='stylesheet' href='css/all_1.css' type='text/css' media='screen' />
   <script src='js/all_1.js' type='text/javascript'></script>
   <link rel='stylesheet' href='css/style_2.css' type='text/css' media='screen' />
   <link rel='stylesheet' href='css/style_3.css' type='text/css' media='screen' />
-  <style>.box h4.title
-  {
-    font-size: 24px;
-    background-color: #fff;
-    margin: 10px 15px;
-    padding: 10px;
-    height: inherit;
-    text-align: center;
-  }
-  </style><link rel='icon' href='/chanzhi/data/upload/201410/f_a4d67a3ce7cd8d6229b0ae542da99e5c.ico' type='image/x-icon' />
+  <link rel='icon' href='/chanzhi/data/upload/201410/f_a4d67a3ce7cd8d6229b0ae542da99e5c.ico' type='image/x-icon' />
   <link rel='shortcut icon' href='/chanzhi/data/upload/201410/f_a4d67a3ce7cd8d6229b0ae542da99e5c.ico' type='image/x-icon' />
   <link href='/rss.xml' title='南京华苏科技有限公司' type='application/rss+xml' rel='alternate' /><!--[if lt IE 9]>
+  <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.1.js"></script>
+  <script>
+    function fn(){
+      location.href="${pageContext.request.contextPath}/login"
+    }
+    function fn1(){
+      location.href="${pageContext.request.contextPath}/reg"
+    }
+  </script>
   <script src='js/all.ie8_1.js' type='text/javascript'></script>
   <![endif]-->
   <!--[if lt IE 10]>
@@ -323,13 +324,6 @@
     <div id='headTitle' style=";">
       <div class="wrapper" style="">
         <div id='siteLogo' style="background:url(images/f_db8007df3b43f4d3e142033f048966de_1.png) no-repeat left top; width:800px; height:100px;" >
-          <!--
-          <div id='siteLogo' style="background-color:red;">
-          <a href='/' ><img src='picture/f_db8007df3b43f4d3e142033f048966de_1.png' class='logo' title='南京华苏科技有限公司' />
-  </a>
-
-          <img src='picture/f_db8007df3b43f4d3e142033f048966de_1.png' class='logo' title='南京华苏科技有限公司' />
-          -->
         </div>
         <div id='siteSlogan'><span></span></div>
       </div>
@@ -352,76 +346,28 @@
   </div>
   <div class='collapse navbar-collapse' id='navbarCollapse' style='margin-top:16px;'>
     <ul class='nav navbar-nav'>
-      <li class='nav-system-home'><a href='/' style="line-height:0px;padding-top:26px;padding-bottom:30px;">首页</a>
+      <li class='nav-system-home'><a href='${pageContext.request.contextPath}/index' style="line-height:0px;padding-top:26px;padding-bottom:30px;">首页</a>
       </li>
       <li class="dropdown ">
-        <a href='' class="dropdown-toggle" style="line-height:0px" data-toggle="dropdown" >走进华苏 <b class='caret' style=''></b></a>
+        <a href='' class="dropdown-toggle" style="line-height:0px" data-toggle="dropdown" >心路历程 <b class='caret' style=''></b></a>
         <ul class='dropdown-menu' role='menu'>
-          <li class='nav-system-company'><a href='/company/' >关于我们</a>
+          <li class='nav-system-company'><a href='${pageContext.request.contextPath}/news' >忆往昔</a>
           </li>
-          <li class='nav-page-2'><a href='/page/HowsoStory.html' >华苏故事</a>
+          <li class='nav-page-2'><a href='${pageContext.request.contextPath}/news' >看今朝</a>
           </li>
-          <li class='nav-page-10'><a href='/page/Honor.html' >资质荣誉</a>
-          </li>
-          <li class='nav-page-14'><a href='/page/ClientMap.html' >客户地图</a>
-          </li>
-          <li class='nav-article-7'><a href='/stafStyle.html' >员工风采</a>
-          </li>
-          <li class='nav-page-7'><a href='/page/ContactUs.html' >联系我们</a>
-          </li>
-          <!-- end nav2 -->
-        </ul>
+
       </li>
-      <li class='nav-article-0'><a href='/article/' style="line-height:0px;padding-top:26px;padding-bottom:30px;">新闻资讯</a>
-      </li>
-      <li class="dropdown ">
-        <a href='' class="dropdown-toggle" style="line-height:0px" data-toggle="dropdown" >产品与解决方案 <b class='caret' style=''></b></a>
-        <ul class='dropdown-menu' role='menu'>
-          <li class='nav-page-300'><a href='/page/300.html' >解决方案</a>
-          </li>
-          <li class='dropdown-submenu nav-page-100'>
-            <a href='/page/softwareProduct.html' >软件产品</a>
-            <ul class='dropdown-menu' role='menu'>
-              <li><a href='/page/RJDZ.html' >软件定制服务</a>
-              </li>
-              <li><a href='/page/DEEPLAN.html' >DEEPLAN移动网络深度挖掘系统</a>
-              </li>
-              <li><a href='/page/iKMS.html' >智能知识管理系统</a>
-              </li>
-              <li><a href='/page/GIS.html' >GIS定制化</a>
-              </li>
-              <li><a href='/page/ZCGL.html' >基于RFID的资产管理系统</a>
-              </li>
-              <li><a href='/page/RFID.html' >基于RFID的室分管控物联网系统</a>
-              </li>
-              <li><a href='/page/CLMS.html' >车辆管理系统</a>
-              </li>
-              <li><a href='/page/iNos.html' >iNos-智能优化系统</a>
-              </li>
-              <li><a href='/page/DWRS.html' >多网融合综合呈现系统</a>
-              </li>
-              <li><a href='/page/QYZH.html' >企业综合管理平台</a>
-              </li>
-              <li><a href='/page/YDTS.html' >移动网络投诉处理解决方案</a>
-              </li>
-            </ul>
-          </li>
-          <li class='nav-page-217'><a href='/page/217.html' >EMC介绍</a>
-          </li>
-          <!-- end nav2 -->
-        </ul>
-      </li>
-      <li class="dropdown ">
-        <a href='' class="dropdown-toggle" style="line-height:0px" data-toggle="dropdown" >投资者关系 <b class='caret' style=''></b></a>
-        <ul class='dropdown-menu' role='menu'>
-          <li class='nav-page-9'><a href='/page/CorporateGovernance.html' >公司治理</a>
-          </li>
-          <!-- end nav2 -->
-        </ul>
-      </li>
-      <li class='nav-page-8'><a href='/page/JoinUs.html' style="line-height:0px;padding-top:26px;padding-bottom:30px;">招贤纳士</a>
-      </li>
-      <!-- end nav1 -->
+      <!-- end nav2 -->
+    </ul>
+    <li class='nav-article-0'><a href='${pageContext.request.contextPath}/product' style="line-height:0px;padding-top:26px;padding-bottom:30px;">产品介绍</a>
+    </li>
+    <li class='nav-article-0'><a href='${pageContext.request.contextPath}/product' style="line-height:0px;padding-top:26px;padding-bottom:30px;">网络调查</a>
+    </li>
+    <li class='nav-page-8'><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">招贤纳士</a>
+    </li>
+    <li class='nav-page-8'><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">购物车</a>
+    </li>
+    <!-- end nav1 -->
     </ul>
   </div>
 </nav>
@@ -446,195 +392,176 @@
   <div class='page-wrapper'>
     <div class='page-content'>
       <script language='javascript'>$(function() {$(".tree").treeview({collapsed: false, unique: false}) })</script>
-      <script language='Javascript'>v.pageID = 100;</script>
-      <style>/*软件产品列表*/
-      .HSsoftwareProduct { position: relative; top:0; left:0; width:100%; height:100%;}
 
-      .HSsoftwareProduct header {border-bottom: 1px solid #E9EAE5}
-      .border_header {border-bottom: 1px solid #E9EAE5}
-      .article &gt; .article-content { padding: 0;}
-      .article-content { padding: 0 !important;}
-      .card { margin-top:10px;}
-      .block_fl { float: left; margin-left:2%;}
-
-      .card-heading a { color:#2790D3;}
-      /*.media-wrapper { border: 1px solid #1B8AD2;}*/</style><script language='Javascript'>
-    </script>
-      <ul class="breadcrumb"><li><span class='breadcrumb-title'>当前位置：</span><a href='/' >首页</a>
-      </li><li>软件产品</li></ul><div class='row'>
-      <div class='col-md-12'>
-        <div class='article'>
-          <!-- delete by liulang begin
-        <header>
-          <h1>软件产品</h1>
-        </header>
-        end -->
-          <section class='article-content'>
-            <div class="row">
-              <div class="col-md-12 col-main">
-                <div class="list list-condensed">
-
-                  <header>
-                    <h2>软件产品</h2>
-                  </header>
-
-                  <div class="col-sm-3 col-xs-5">
-                    <div class="card">
-                      <a href="http://www.howso.cn/page/RJDZ.html" target="_blank" class="media-wrapper">
-                        <img src="picture/rjdz.jpg" title="软件定制服务" alt="软件定制服务"></a>
-
-                      <div class="card-heading">
-                        <a href="http://www.howso.cn/page/RJDZ.html" target="_blank"> <strong>软件定制服务</strong>
-                        </a>
-                        <span class="card-content text-latin"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-5">
-                    <div class="card">
-                      <a href="http://www.howso.cn/page/DEEPLAN.html" target="_blank" class="media-wrapper">
-                        <img src="picture/deeplan.jpg" title="Deeplan移动网络深度挖掘系统" alt="Deeplan移动网络深度挖掘系统"></a>
-
-                      <div class="card-heading">
-                        <a href="http://www.howso.cn/page/DEEPLAN.html" target="_blank"> <strong>Deeplan移动网络深度挖掘系统</strong>
-                        </a>
-                        <span class="card-content text-latin"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-5">
-                    <div class="card">
-                      <a href="http://www.howso.cn/page/iKMS.html" target="_blank" class="media-wrapper">
-                        <img src="picture/zsgl.jpg" title="智能知识管理系统" alt="智能知识管理系统"></a>
-
-                      <div class="card-heading">
-                        <a href="http://www.howso.cn/page/iKMS.html" target="_blank">
-                          <strong>智能知识管理系统</strong>
-                        </a>
-                        <span class="card-content text-latin"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-5">
-                    <div class="card">
-                      <a href="http://www.howso.cn/page/GIS.html" target="_blank" class="media-wrapper">
-                        <img src="picture/gis.jpg" title="GIS定制化" alt="GIS定制化"></a>
-
-                      <div class="card-heading">
-                        <a href="http://www.howso.cn/page/GIS.html" target="_blank">
-                          <strong>GIS定制化</strong>
-                        </a>
-                        <span class="card-content text-latin"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-5">
-                    <div class="card">
-                      <a href="http://www.howso.cn/page/ZCGL.html" target="_blank" class="media-wrapper">
-                        <img src="picture/zcgl.jpg" title="基于RFID的资产管理系统" alt="基于RFID的资产管理系统"></a>
-
-                      <div class="card-heading">
-                        <a href="http://www.howso.cn/page/ZCGL.html" target="_blank">
-                          <strong>基于RFID的资产管理系统</strong>
-                        </a>
-                        <span class="card-content text-latin"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-5">
-                    <div class="card">
-                      <a href="http://www.howso.cn/page/CLMS.html" target="_blank" class="media-wrapper">
-                        <img src="picture/clgl.jpg" target="_blank" title="车辆管理系统" alt="车辆管理系统"></a>
-
-                      <div class="card-heading">
-                        <a href="http://www.howso.cn/page/CLMS.html">
-                          <strong>车辆管理系统</strong>
-                        </a>
-                        <span class="card-content text-latin"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-5">
-                    <div class="card">
-                      <a href="http://www.howso.cn/page/iAs.html" target="_blank" class="media-wrapper">
-                        <img src="picture/ias.jpg" title="<a href='http://www.howso.cn/product/1_IAS.html' class='tag-link'>IAS</a>
-<a href='http://www.howso.cn/product/1_IAS.html' class='tag-link'>室分综合管理</a>
-" alt="IAS室分综合管理"></a>
-
-                      <div class="card-heading">
-                        <a href="http://www.howso.cn/page/iAs.html" target="_blank">
-                          <strong>IAS室分综合管理</strong>
-                        </a>
-                        <span class="card-content text-latin"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-5">
-                    <div class="card">
-                      <a href="http://www.howso.cn/page/iNos.html" target="_blank" class="media-wrapper">
-                        <img src="picture/inos.jpg" title="iNos-智能<a href='http://www.howso.cn/product/12.html' class='tag-link'>优化</a>
-系统" alt="iNos-智能优化系统"></a>
-
-                      <div class="card-heading">
-                        <a href="http://www.howso.cn/page/iNos.html" target="_blank">
-                          <strong>iNos-智能优化系统</strong>
-                        </a>
-                        <span class="card-content text-latin"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-5">
-                    <div class="card">
-                      <a href="http://www.howso.cn/page/DWRS.html" target="_blank" class="media-wrapper">
-                        <img src="picture/dwrh.jpg" title="多网融合综合呈现系统" alt="多网融合综合呈现系统"></a>
-
-                      <div class="card-heading">
-                        <a href="http://www.howso.cn/page/DWRS.html" target="_blank">
-                          <strong>多网融合综合呈现系统</strong>
-                        </a>
-                        <span class="card-content text-latin"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-5">
-                    <div class="card">
-                      <a href="http://www.howso.cn/page/QYZH.html" target="_blank" class="media-wrapper">
-                        <img src="picture/zhpt.jpg" title="企业综合管理平台" alt="企业综合管理平台"></a>
-
-                      <div class="card-heading">
-                        <a href="http://www.howso.cn/page/QYZH.html" target="_blank">
-                          <strong>企业综合管理平台</strong>
-                        </a>
-                        <span class="card-content text-latin"></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-5">
-                    <div class="card">
-                      <a href="http://www.howso.cn/page/YDTS.html" target="_blank" class="media-wrapper">
-                        <img src="picture/ydts.jpg" title="<a href='http://www.howso.cn/product/9.html' class='tag-link'>移动网络投诉处理</a>
-解决方案" alt="移动网络投诉处理解决方案"></a>
-
-                      <div class="card-heading">
-                        <a href="http://www.howso.cn/page/YDTS.html" target="_blank">
-                          <strong>移动网络投诉处理解决方案</strong>
-                        </a>
-                        <span class="card-content text-latin"></span>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+      <div id='focus' class='block-list'>
+        <div class='row focus-top' data-default-grid='12'><div class='col-md-4 col-auto'><div id='slide' class='carousel slide' data-ride='carousel'>
+          <div class='carousel-inner'  >
+            <div class='item'  data-target='' style="background: url('images/f_c8e50ebf8a87b68b3ed14d544b2809ee_1.jpg') 50% 50% no-repeat; height:420px;">
+              <!--
+              <div class='item'  data-target=''>
+              <img src='picture/f_c8e50ebf8a87b68b3ed14d544b2809ee_1.jpg'  />png
+              -->
+              <div class='carousel-caption'>
+                <h2 style='color:#FFF'></h2>
+                <div></div>
               </div>
-            </div>      </section>
-          <section>
-          </section>
-          <footer>
-            <p class='small'><strong class="text-muted">关键字</strong><span class="article-keywords">：软件产品,软件,产品</span></p>
-          </footer>
+            </div>
+          </div>
+          <a class='left carousel-control' href='#slide' data-slide='prev'> <i class='icon-prev'></i> </a>
+          <a class='right carousel-control' href='#slide' data-slide='next'> <i class='icon-next'></i> </a>
         </div>
+          <style>#block5{}#block5 .panel-heading{}</style></div></div>
+        <div class='row focus-middle' data-default-grid='4'><div class='col-md-4' data-grid='4'><!-- modifiy nidun 2014.12.08-->
+          <div id="block10" class='panel panel-block news_custom ' style="">
+            <div id="news_custom_ph" class='panel-heading' style="">
+              <strong style="" id="news_custom_t">新闻</strong>
+              <div id="news_custom_pr" class='pull-right' style=""><a href='/news.html' >更多&gt;&gt;</a>
+              </div>
+            </div>
+            <div class='panel-body' id="news_custom_pb_contar"  style="" >
+              <ul class='ul-list' >
+                <li>
+                  <div id="news_first_contar" style="">
+
+                    <img id="imgsrc" onclick="location='/news/296.html'" src="" width ="100px" height="100px"  />
+
+                    <a id="news_first_articleTitle" href="/news/296.html" title="华苏“蚂蚁管车”参展中国电信智慧电动车研讨会" style="">华苏“蚂蚁管车”参展中国电信智慧电动车研讨会</a>
+                    <div onclick="location='/news/296.html'" id ="news_first_articleText" style=""></div>
+                    <div id="news_first_date" style="">2018-04-17</div>
+                    <div style="clear:both;">
+                    </div>
+                  </div>
+                  <div id="licount0" style="display:none">
+                    <p class="p"><br />
+                    </p>
+                    <p class="p">&nbsp; &nbsp; 4<span>月</span><span>11</span><span>日下午，中国电信物联网智慧电动车市场、技术与研发研讨会在南京成功举行！来自全国各省的行业内外人士齐聚一堂，共话电动车在物联网背景下的新发展！</span></p>
+                    <p class="p"><img src="picture/f_cac265171e7d515e8b4a848a59080419_1.png" alt="" />&nbsp;</p>
+                    <p class="p"><span>&nbsp; &nbsp; 南京华苏科技有限公司本次携自研的</span>“蚂蚁管车”产品参加研讨会。物联网事业部负责人全面介绍了“蚂蚁管车”终端的可靠性、功能完整性和下一代产品的演进方向，以及软件后台所具备的大数据架构、在公安业务和政企业务方向上的扩展性。</p>
+                    <p class="p"><img src="picture/f_da4b0e12c6be1c38993f4ee6f3d09a7b_1.png" alt="" />&nbsp;</p>
+                    <p class="p">&nbsp; &nbsp; 同时，我们还分享了在四川省成功推广的案例，着重介绍了可复制的商业模式和合作机制，给参会的合作伙伴们提供了新的思路。</p>
+                    <p class="p"><img src="picture/f_f223d985b81cb616ed3ca919376ce93b_1.png" alt="" />&nbsp;</p>
+                    <p class="MsoNormal">&nbsp;</p>
+                    <p class="MsoNormal" align="center" style="text-align:center;">------“蚂蚁管车”解决方案------</p>
+                    <p class="MsoNormal"><span>&nbsp; &nbsp; 蚂蚁管车基于运营商的</span>NB-IoT物联网，针对当前电动车、摩托车频繁被盗的治安问题，提出了从案前预防到案后侦查的整体解决方案。</p>
+                    <p class="MsoNormal">“蚂蚁管车”有哪些功能？</p>
+                    <p class="MsoNormal"><img src="picture/f_91bf0b934177fcca4e77d775e2a034fa_1.png" alt="" />&nbsp;</p>
+                    <p class="MsoNormal">终端设备参数指标：</p>
+                    <p class="MsoNormal"><img src="picture/f_5cec7af6ca66ed3110ad1c9a16d5abbe_1.png" alt="" /></p>
+                    <p class="MsoNormal">蚂蚁管车用户手机端部分界面：</p>
+                    <p class="MsoNormal"><img src="picture/f_1b50c5e49c9b6d1ab7c329960fc0638e_1.png" alt="" /></p>
+                  </div>
+                  <div id="licount1" style="display:none">
+                    <a href='/news/296.html' title='华苏“蚂蚁管车”参展中国电信智慧电动车研讨会'>华苏“蚂蚁管车”参展中国电信智慧电动车研讨会</a>
+                    <span class='pull-right'>2018-04-17</span>
+                  </div>
+
+
+                </li>
+
+                <li>
+
+                  <div class="news_custom_other_t" style=""><a href='/news/295.html' title='我司“基于RFID的室分管控物联网系统”荣获江苏省十大创新力产品'>我司“基于RFID的室分管控物联网系统”荣获江苏省十大创新力产品</a>
+                  </div>
+                  <span class='pull-right news_custom_other_data' style="">2018-04-09</span>
+
+
+                </li>
+
+                <li>
+
+                  <div class="news_custom_other_t" style=""><a href='/news/294.html' title='热烈庆祝华苏科技荣获 “江苏省博士后创新实践基地”称号'>热烈庆祝华苏科技荣获 “江苏省博士后创新实践基地”称号</a>
+                  </div>
+                  <span class='pull-right news_custom_other_data' style="">2018-03-20</span>
+
+
+                </li>
+
+                <li>
+
+                  <div class="news_custom_other_t" style=""><a href='/news/293.html' title='“剩者”为王，主力格局初形成 破而后立，华苏力推“智”模式'>“剩者”为王，主力格局初形成 破而后立，华苏力推“智”模式</a>
+                  </div>
+                  <span class='pull-right news_custom_other_data' style="">2018-03-14</span>
+
+
+                </li>
+
+                <li>
+
+                  <div class="news_custom_other_t" style=""><a href='/news/291.html' title='锦华至，万物苏----2018华苏科技有限公司新春年会'>锦华至，万物苏----2018华苏科技有限公司新春年会</a>
+                  </div>
+                  <span class='pull-right news_custom_other_data' style="">2018-02-25</span>
+
+
+                </li>
+
+              </ul>
+            </div>
+            <script>
+              function loaderAfter()
+              {
+                var img = $('#licount0 img');
+                var imgsrc = img.attr('src');
+                if((imgsrc==undefined || imgsrc==null)){
+                  imgsrc = $('#licount0 p img').attr('src');
+                }
+                if((imgsrc==undefined || imgsrc==null)){
+                  $('#block10 div ul li:eq(0)').html($('#licount1').html());
+                  //$('#block10').attr('style','height:285px');
+                  return;
+                }
+
+                var imgsrc = $('#imgsrc').attr('src',imgsrc);
+                var licount0Text = $.trim($('#licount0').text());
+                if(licount0Text.length>=50){
+                  licount0Text = licount0Text.substr(0,49)+"...";
+                }
+
+                $('#news_first_articleText').text(licount0Text);
+              }
+              loaderAfter();
+
+            </script>
+          </div>
+          <style>#block10{}#block10 .panel-heading{}</style></div><div class='col-md-8' data-grid='8'><div id="block_solution">
+          <div>
+            <strong class="block_solution_title" style="padding-left: 10px;" >解决方案</strong>
+            <a class="block_solution_more" href="/page/softwareProduct.html" >更多>></a>
+            <div class="clear"></div>
+          </div>
+          <div class="block_solution_content">
+            <ul class="block_solution_list">
+              <li style="margin-left:0;">
+                <a class="solution_aimg" href="/page/298.html" target="_blank" >
+                  <img alt="无线网络规划&优化" title="无线网络规划&优化" src="picture/01_1.png" width="100%" height="100%" />
+                  <div class="solution_aimg_title">无线网络规划&优化</div>
+                </a>
+              </li>
+
+              <li>
+                <a class="solution_aimg" href="/page/299.html" target="_blank">
+                  <img alt="专项专题优化" title="专项专题优化" src="picture/02_1.png" width="100%" height="100%" />
+                  <div class="solution_aimg_title">专项专题优化</div>
+                </a>
+              </li>
+
+              <li>
+                <a class="solution_aimg" href="/page/RJDZ.html" target="_blank">
+                  <img alt="软件定制服务" title="软件定制服务" src="picture/03_1.png" width="100%" height="100%" />
+                  <div class="solution_aimg_title">软件定制服务</div>
+                </a>
+              </li>
+
+              <div class="clear"></div>
+            </ul>
+          </div>
+        </div>
+
+          <style>#block14{}#block14 .panel-heading{}</style></div><div class='col-md-12' data-grid='12'><div id="bottom_link_container_w" >
+
+        </div>
+          <style>#block20{}#block20 .panel-heading{}</style></div></div>
+        <div class='row focus-bottom' data-default-grid='6'></div>
       </div>
-    </div>
       <div id="hstopcontainer" >
         <div id="hstopstyle" >
 
@@ -642,24 +569,12 @@
 
             <span class="tlinka service_hotline" ></span>
 
-            <a class="tlinka" href="http://www.howso.cn/page/OAweb.html" target="_black" >
-              OA登录<span class="tlinkaline" >|</span>
+            <a class="tlinka" href="${pageContext.request.contextPath}/login" target="_black">
+              用户登录<span class="tlinkaline" >|</span>
             </a>
-
-            <a class="tlinka" href="http://mail.howso.cn:6080" target="_black">
-              企业邮箱<span class="tlinkaline" >|</span>
+            <a class="tlinka" href="${pageContext.request.contextPath}/reg" target="_black" >
+              用户注册<span class="tlinkaline" >|</span><span>${sessionUser.nickname}你好!</span>
             </a>
-
-            <a class="tlinka" href="http://howso.hongsong.cn/com/ctrl/index" target="_black" >
-              iKMS<span class="tlinkaline"  >|</span>
-            </a>
-
-
-            <a class="tlinka"  href="http://47.99.86.222:8888" target="_black">
-              ePMS<span class="tlinkaline"  >|</span>
-            </a>
-
-
           </div>
         </div>
 
@@ -668,14 +583,8 @@
 
       <style>#block21{}#block21 .panel-heading{}</style>  </div></div>  <footer id='footer' class='clearfix'>
   <div class='wrapper'>
-    <div id='footNav'>
-      <a href='/sitemap/' class='text-link' style='color:#fff;font-famliy:΢���ź� '  ><i class='icon-sitemap'></i> 站点地图</a>
-    </div>
       <span id='copyright'>
         &copy; 2018 南京华苏科技有限公司&nbsp;&nbsp;      </span>
-      <span id='icpInfo'>
-        <a href='http://www.miitbeian.gov.cn' target='_blank' style='color:#fff' >苏ICP备12033749号-2</a>
-              </span>
     <!--  ��֪ͼ�� liulang 20141021 -->
     <!--
     <div id='powerby'>
@@ -686,8 +595,11 @@
 
   <script language='Javascript'>$(document).ready(function()
   {
-    $('.nav-page-' + v.pageID + ':first').addClass('active');
-  });
+    // add "index" class to the body element.
+    $('body').addClass('index');
+
+    $('.nav-system-home:first').addClass('active');
+  })
 
   </script>
   <a href='#' id='go2top' class='icon-arrow-up' data-toggle='tooltip' title='返回顶部'></a>
@@ -750,4 +662,3 @@
   <style>#block24{}#block24 .panel-heading{}</style></div>
 </body>
 </html>
-

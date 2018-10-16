@@ -32,39 +32,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/reg/dao" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/reg/model" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/reg/service" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/login/controller" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/login/dao" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/login/model" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/login/service" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myemail/controller" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myemail/dao" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myemail/model" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myemail/service" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myleave/controller" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myleave/dao" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myleave/model" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myleave/service" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/mynews/controller" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/mynews/dao" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/mynews/model" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/mynews/service" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myproducts/controller" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myproducts/dao" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myproducts/model" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myproducts/service" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myuser/controller" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myuser/dao" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myuser/model" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/myuser/service" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/reg/controller" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/reg/dao" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/reg/model" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/java/com/qf/reg/service" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/resources/db.properties" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/resources/log4j.properties" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/resources/mapper" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/resources/my-batis" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/main/resources/spring" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/resources/db.properties" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/resources/log4j.properties" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/resources/mapper" charset="GBK" />
