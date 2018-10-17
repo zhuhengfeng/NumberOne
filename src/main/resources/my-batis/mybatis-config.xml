@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<setting name="logImpl" value="LOG4J"/>
 	</settings>
 	<typeAliases>
-		<package name="model"/>
+		<package name="com.qf.mynews.model"/>
 	</typeAliases>
 	
 </configuration>

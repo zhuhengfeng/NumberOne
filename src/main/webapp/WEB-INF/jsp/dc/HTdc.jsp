@@ -2,18 +2,15 @@
   Created by IntelliJ IDEA.
   User: asus
   Date: 2018/10/15
-  Time: 17:08
+  Time: 17:09
   To change this template use File | Settings | File Templates.
 --%>
-
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Bootstrap响应式布局后台模板BlAdmin - JS代码网</title>
+  <title>NumberOne网络调查</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -27,8 +24,8 @@
   <link href="css/adminia.css" rel="stylesheet" />
   <link href="css/adminia-responsive.css" rel="stylesheet" />
 
-  <link href="css/dashboard.css" rel="stylesheet" />
 
+  <link href="css/jquery.visualize.css" rel="stylesheet" />
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -113,7 +110,7 @@
 
           <div class="account-details">
 
-            <span class="account-name">${sessionUser.nickname}</span>
+            <span class="account-name">罗宾逊</span>
 
             <span class="account-role">管理员</span>
 
@@ -131,7 +128,7 @@
 
         <ul id="main-nav" class="nav nav-tabs nav-stacked">
 
-          <li class="active">
+          <li >
             <a href="./">
               <i class="icon-home"></i>
               首页
@@ -141,40 +138,49 @@
           <li>
             <a href="./faq.html">
               <i class="icon-pushpin"></i>
-              产品介绍
+              帮助页面
             </a>
           </li>
 
           <li>
             <a href="./plans.html">
               <i class="icon-th-list"></i>
-              招贤纳士
+              价目表单
             </a>
           </li>
 
           <li>
             <a href="./grid.html">
               <i class="icon-th-large"></i>
-              新闻资讯
+              网格布局
+              <span class="label label-warning pull-right">5</span>
             </a>
           </li>
 
-          <li>
+          <li class="active">
             <a href="./charts.html">
               <i class="icon-signal"></i>
-              网络调查
+              图表统计
             </a>
           </li>
 
           <li>
             <a href="./account.html">
               <i class="icon-user"></i>
-              用户管理
+              用户账号
             </a>
           </li>
 
+          <li>
+            <a href="./login.html">
+              <i class="icon-lock"></i>
+              登录页面
+            </a>
+          </li>
 
         </ul>
+
+
 
         <hr />
 
@@ -191,90 +197,86 @@
       <div class="span9">
 
         <h1 class="page-title">
-          <i class="icon-home"></i>
-          首页
+          <i class="icon-signal"></i>
+          图表统计
         </h1>
 
-        <div class="stat-container">
 
-          <div class="stat-holder">
-            <div class="stat">
-              <span>564</span>
-              产品数量
-            </div> <!-- /stat -->
-          </div> <!-- /stat-holder -->
 
-          <div class="stat-holder">
-            <div class="stat">
-              <span>423</span>
-              新闻条数
-            </div> <!-- /stat -->
-          </div> <!-- /stat-holder -->
-
-          <div class="stat-holder">
-            <div class="stat">
-              <span>96</span>
-              用户人数
-            </div> <!-- /stat -->
-          </div> <!-- /stat-holder -->
-
-          <div class="stat-holder">
-            <div class="stat">
-              <span>2</span>
-              招聘信息
-            </div> <!-- /stat -->
-          </div> <!-- /stat-holder -->
-
-        </div> <!-- /stat-container -->
 
         <div class="widget">
 
           <div class="widget-header">
-            <i class="icon-signal"></i>
-            <h3>图表统计</h3>
+            <h3>Area Chart</h3>
           </div> <!-- /widget-header -->
 
           <div class="widget-content">
-            <div id="bar-chart" class="chart-holder"></div> <!-- /bar-chart -->
+
+            <div id="area-chart" class="chart-holder"></div> <!-- /area-chart -->
+
+
+
           </div> <!-- /widget-content -->
 
         </div> <!-- /widget -->
 
-        <div class="row">
 
-          <div class="span5">
 
-            <div class="widget">
 
-              <div class="widget-header">
-                <h3>公告栏</h3>
-              </div> <!-- /widget-header -->
+        <div class="widget">
 
-              <div class="widget-content">
-                <p>本后台系统于2018/10/18正式运行,欢迎大家来使用</p>
-              </div> <!-- /widget-content -->
+          <div class="widget-header">
+            <h3>曲线统计</h3>
+          </div> <!-- /widget-header -->
 
-            </div> <!-- /widget -->
+          <div class="widget-content">
 
-          </div> <!-- /span5 -->
+            <div id="line-chart" class="chart-holder"></div> <!-- /donut-chart -->
 
-          <div class="span4">
 
-            <div class="widget">
 
-              <div class="widget-header">
-                <h3>注意事项</h3>
-              </div> <!-- /widget-header -->
+          </div> <!-- /widget-content -->
 
-              <div class="widget-content">
-                <p>1.不得擅自操作</p>
-                <p>2.不得损害公司利益</p>
-              </div> <!-- /widget-content -->
+        </div> <!-- /widget -->
 
-            </div> <!-- /widget -->
-          </div> <!-- /span4 -->
 
-        </div> <!-- /row -->
+
+        <div class="widget">
+
+          <div class="widget-header">
+            <h3>柱状图统计</h3>
+          </div> <!-- /widget-header -->
+
+          <div class="widget-content">
+
+            <div id="bar-chart" class="chart-holder"></div> <!-- /donut-chart -->
+
+
+
+          </div> <!-- /widget-content -->
+
+        </div> <!-- /widget -->
+
+
+
+
+        <div class="widget">
+
+          <div class="widget-header">
+            <h3>饼图统计</h3>
+          </div> <!-- /widget-header -->
+
+          <div class="widget-content">
+
+            <div id="pie-chart" class="chart-holder"></div> <!-- /donut-chart -->
+
+
+
+          </div> <!-- /widget-content -->
+
+        </div> <!-- /widget -->
+
+
 
       </div> <!-- /span9 -->
 
@@ -288,9 +290,9 @@
 
 <div id="footer">
 
-  <div class="container" align="center">
+  <div class="container">
     <hr />
-    <p>&copy; 2018 NumberOne</p>
+    <p>&copy; 2012 BlAdmin.</p>
   </div> <!-- /container -->
 
 </div> <!-- /footer -->
@@ -311,6 +313,11 @@
 
 <script src="js/bootstrap.js"></script>
 <script src="js/bar.js"></script>
+<script src="js/area.js"></script>
+<script src="js/line.js"></script>
+<script src="js/pie.js"></script>
+
+
 
 </body>
 </html>

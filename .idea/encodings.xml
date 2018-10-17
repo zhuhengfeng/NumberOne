@@ -17,9 +17,13 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/myleave/model" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/myleave/service" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/mynews/controller" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/qf/mynews/controller/NewsController.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/mynews/dao" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/qf/mynews/dao/NewsMapper.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/mynews/model" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/mynews/service" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/qf/mynews/service/INewsService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/qf/mynews/service/NewsService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/myproducts/controller" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/myproducts/dao" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/qf/myproducts/model" charset="GBK" />
@@ -41,6 +45,9 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/fonts" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/images" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/jquery-3.2.1.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/jquery.validate.min.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/picture" charset="GBK" />
     <file url="file://D:/my_admin" charset="UTF-8" />
   </component>

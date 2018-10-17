@@ -9,186 +9,416 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>办公自动化管理系统</title>
-  <link href="${pageContext.request.contextPath}/css/style_5.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.1.js"></script>
-  <script>
-    function setit()
-    {
-      $("#selectop").empty();
-      $("#selectop").html("<select id='sex' name='sex'><option value='0'>男</option><option value='1'>女</option></select>")
-      var a=document.getElementById("sex").getElementsByTagName("option");
-      var b="${sessionUser.sex}";
-      for(var i=0;i<a.length;i++){
-        if(a[i].value==b){
-          a[i].selected=true;
-        }
-      }
-      $("input[type='text']").each(function(){
+  <meta charset="utf-8" />
+  <title>NumberOne用户操作</title>
 
-        $(this).removeAttr("readonly")
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
-      })
-      $("#save").remove();
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
 
-      $("#btn").html("<br/><input type='submit' value='保存'><input type='button' value='返回' onclick='goBack()'> ");
+  <link href="css/dfd2a21ed8794765884e8fe03dd6f51b.css" rel="stylesheet" />
+  <link href="css/font-awesome.css" rel="stylesheet" />
 
-    }
-    function goBack(){
-      location.href="${pageContext.request.contextPath}/user/toindex.do"
-    }
-    function loginout(){
-      if(confirm("确认退出?")){
-        location.href="${pageContext.request.contextPath}/user/loginout.do"
-      }
-    }
+  <link href="css/adminia.css" rel="stylesheet" />
+  <link href="css/adminia-responsive.css" rel="stylesheet" />
 
 
-  </script>
-</head>
+  <link href="css/plans.css" rel="stylesheet" />
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="js/html5.js"></script>
+  <![endif]-->
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
 <body>
-<div class="top">
-  <div class="global-width">
-    <img src="${pageContext.request.contextPath}/images/logo.gif" class="logo" />
-  </div>
-</div>
-<div class="status">
-  <div class="global-width">
-    ${sessionUser.nickname}你好！欢迎访问办公管理系统！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="loginout()";>注销</a>
-  </div>
-</div>
-<form id="myForm" name="myForm" action="${pageContext.request.contextPath}/user/self.do" method="post">
-  <input type="hidden" name="u.id" value="26"/>
-  <input type="hidden" name="u.sex" value="2" id="u_sex"/>
-  <input type="hidden" name="u.supper" value="0" id="u_supper"/>
-  <div class="main">
-    <div class="global-width">
+
+<div class="navbar navbar-fixed-top">
+
+  <div class="navbar-inner">
+
+    <div class="container">
+
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a class="brand" href="./">BlAdmin</a>
+
+      <div class="nav-collapse">
+
+        <ul class="nav pull-right">
+          <li>
+            <a href="#"><span class="badge badge-warning">7</span></a>
+          </li>
+
+          <li class="divider-vertical"></li>
+
+          <li class="dropdown">
+
+            <a data-toggle="dropdown" class="dropdown-toggle " href="#">
+              罗宾逊 <b class="caret"></b>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="./account.html"><i class="icon-user"></i> 账号设置  </a>
+              </li>
+
+              <li>
+                <a href="./change_password.html"><i class="icon-lock"></i> 修改密码</a>
+              </li>
+
+              <li class="divider"></li>
+
+              <li>
+                <a href="./"><i class="icon-off"></i> 退出</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div> <!-- /nav-collapse -->
+
+    </div> <!-- /container -->
+
+  </div> <!-- /navbar-inner -->
+
+</div> <!-- /navbar -->
 
 
-      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-      <html xmlns="http://www.w3.org/1999/xhtml">
-      <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>办公自动化管理系统</title>
-        <link href="${pageContext.request.contextPath}/css/style_5.css" rel="stylesheet" type="text/css" />
-      </head>
 
-      <body>
-      <div class="nav" id="nav">
-        <div class="t"></div>
-        <dl>
-          <dt onclick="this.parentNode.className=this.parentNode.className=='open'?'':'open';">信息管理
-          </dt>
-          <dd>
-            <a href="${pageContext.request.contextPath}/user/toindex.do" target="_self">个人信息</a>
-          </dd>
-        </dl>
-        <dl>
-          <dt
-                  onclick="this.parentNode.className=this.parentNode.className=='open'?'':'open';">
-            邮件管理
-          </dt>
-          <dd>
-            <a href="${pageContext.request.contextPath}/user/writeEmail.do" target="_self">写邮件</a>
-          </dd>
-          <dd>
-            <a href="${pageContext.request.contextPath}/user/toshouEmail.do" target="_self">收邮件</a>
-          </dd>
-          <dd>
-            <a href="${pageContext.request.contextPath}/user/toribbishEmail.do"  target="_self">垃圾邮件</a>
-          </dd>
-        </dl>
-        <dl>
-          <dt
-                  onclick="this.parentNode.className=this.parentNode.className=='open'?'':'open';">
-            考勤管理
-          </dt>
-          <dd>
-            <a href="${pageContext.request.contextPath}/user/toaskforleave.do" target="_self">休假</a>
-          </dd>
-        </dl>
 
-        <dl >
+<div id="content">
 
-          <dt
-                  onclick="this.parentNode.className=this.parentNode.className=='open'?'':'open';">
-            权限管理
-          </dt>
-          <dd>
-            <a href="${pageContext.request.contextPath}/user/toindex.do" target="_self">个人账户</a>
-          </dd>
-          <c:if test="${sessionUser.isadmin==0}">
-            <dd>
-              <a href="${pageContext.request.contextPath}/user/userlist.do"target="_self">管理账户</a>
-            </dd>
-          </c:if>
-        </dl>
-      </div>
-      </body>
-      </html>
+  <div class="container">
 
-      <div class="action">
-        <div class="t">
-          个人信息
-        </div>
-        <div class="pages">
-          <table width="90%" border="0" cellspacing="0" cellpadding="0">
-            <tr >
-              <td align="right" width="30%">昵称：</td><td  align="left"><input type="text" name="nickname" value="${sessionUser.nickname}" readonly="readonly" id="nickname"/></td>
-            </tr>
-            <tr >
-              <td align="right" width="30%">年龄：</td><td  align="left"><input type="text" name="age" value="${sessionUser.age}" readonly="readonly" id="age"/></td>
-            </tr>
-            <tr >
-              <td align="right" width="30%">性别：</td><td  align="left" id="selectop">
+    <div class="row">
 
-              <input type="text" name="sex" value="${sessionUser.sex>0?'女':'男'}" readonly="readonly" id="u_sex"/>
+      <div class="span3">
 
-            </td>
-            </tr>
-            <tr >
-              <td align="right" width="30%">手机：</td><td  align="left"><input type="text" name="phone" value="${sessionUser.phone}" readonly="readonly" id="u_mobile"/></td>
-            </tr>
-            <tr >
-              <td align="right" width="30%">地址：</td><td  align="left"><input type="text" name="address" value="${sessionUser.address}" readonly="readonly" id="u_address"/></td>
-            </tr>
-            <tr >
-              <td align="center" colspan="2" id="btn"><br/><input type="button"  id="save" value="编辑数据" onclick="setit()" /></td>
-            </tr>
+        <div class="account-container">
 
-          </table>
+          <div class="account-avatar">
+            <img src="picture/headshot.png" alt="" class="thumbnail" />
+          </div> <!-- /account-avatar -->
 
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
-<div class="copyright">
-  Copyright &nbsp; &copy; &nbsp;
-</div>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.1.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.validate.min.js"></script>
-<script type="text/javascript">
-  $(function(){
-    $("#myForm").validate({
-      rules:{
-        "nickname":{required:true},
-        "phone":{required:true,minlength:11}
+          <div class="account-details">
 
-      },
-      messages:{
-        "nickname":"<font color=red>*</font>",
-        "phone":{required:"<font color=red>*</font>",minlength:"号码长度不能少于11位"}
-      }
-    });
-  })
-</script>
+            <span class="account-name">罗宾逊</span>
+
+            <span class="account-role">管理员</span>
+
+						<span class="account-actions">
+							<a href="javascript:;">资料</a> |
+
+							<a href="javascript:;">编辑设置</a>
+						</span>
+
+          </div> <!-- /account-details -->
+
+        </div> <!-- /account-container -->
+
+        <hr />
+
+        <ul id="main-nav" class="nav nav-tabs nav-stacked">
+
+          <li>
+            <a href="./">
+              <i class="icon-home"></i>
+              首页
+            </a>
+          </li>
+
+          <li>
+            <a href="./faq.html">
+              <i class="icon-pushpin"></i>
+              帮助页面
+            </a>
+          </li>
+
+          <li>
+            <a href="./plans.html">
+              <i class="icon-th-list"></i>
+              价目表单
+            </a>
+          </li>
+
+          <li>
+            <a href="./grid.html">
+              <i class="icon-th-large"></i>
+              网格布局
+              <span class="label label-warning pull-right">5</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./charts.html">
+              <i class="icon-signal"></i>
+              图表统计
+            </a>
+          </li>
+
+          <li class="active">
+            <a href="./account.html">
+              <i class="icon-user"></i>
+              用户账号
+            </a>
+          </li>
+
+          <li>
+            <a href="./login.html">
+              <i class="icon-lock"></i>
+              登录页面
+            </a>
+          </li>
+
+        </ul>
+
+
+
+        <hr />
+
+        <div class="sidebar-extra">
+          <p>这里是提示信息文字这里是提示信息文字这里是提示信息文字这里是提示信息文字这里是提示信息文字这里是提示信息文字这里是提示信息文字这里是提示信息文字.</p>
+        </div> <!-- .sidebar-extra -->
+
+        <br />
+
+      </div> <!-- /span3 -->
+
+
+
+      <div class="span9">
+
+        <h1 class="page-title">
+          <i class="icon-th-large"></i>
+          用户设置
+        </h1>
+
+
+        <div class="row">
+
+          <div class="span9">
+
+            <div class="widget">
+
+              <div class="widget-header">
+                <h3>基本信息</h3>
+              </div> <!-- /widget-header -->
+
+              <div class="widget-content">
+
+
+
+                <div class="tabbable">
+                  <ul class="nav nav-tabs">
+                    <li class="active">
+                      <a href="#1" data-toggle="tab">资料</a>
+                    </li>
+                    <li><a href="#2" data-toggle="tab">设置</a></li>
+                  </ul>
+
+                  <br />
+
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="1">
+                      <form id="edit-profile" class="form-horizontal" />
+                      <fieldset>
+
+                        <div class="control-group">
+                          <label class="control-label" for="username">用户名：</label>
+                          <div class="controls">
+                            <input type="text" class="input-medium disabled" id="username" value="goideate" disabled="" />
+                            <p class="help-block">用户名是为登录而用，不能修改.</p>
+                          </div> <!-- /controls -->
+                        </div> <!-- /control-group -->
+
+
+                        <div class="control-group">
+                          <label class="control-label" for="firstname">姓名：</label>
+                          <div class="controls">
+                            <input type="text" class="input-medium" id="firstname" value="JS代码网" />
+                          </div> <!-- /controls -->
+                        </div> <!-- /control-group -->
+
+
+                        <div class="control-group">
+                          <label class="control-label" for="lastname">昵称：</label>
+                          <div class="controls">
+                            <input type="text" class="input-medium" id="lastname" value="JS代码网" />
+                          </div> <!-- /controls -->
+                        </div> <!-- /control-group -->
+
+
+                        <div class="control-group">
+                          <label class="control-label" for="email">邮箱：</label>
+                          <div class="controls">
+                            <input type="text" class="input-large" id="email" value="admin@js-css.cn" />
+                          </div> <!-- /controls -->
+                        </div> <!-- /control-group -->
+
+
+                        <br /><br />
+
+                        <div class="control-group">
+                          <label class="control-label" for="password1">密码：</label>
+                          <div class="controls">
+                            <input type="password" class="input-medium" id="password1" value="password" />
+                          </div> <!-- /controls -->
+                        </div> <!-- /control-group -->
+
+
+                        <div class="control-group">
+                          <label class="control-label" for="password2">确认密码：</label>
+                          <div class="controls">
+                            <input type="password" class="input-medium" id="password2" value="password" />
+                          </div> <!-- /controls -->
+                        </div> <!-- /control-group -->
+
+
+
+                        <br />
+
+
+                        <div class="form-actions">
+                          <button type="submit" class="btn btn-primary">保存</button>
+                          <button class="btn">取消</button>
+                        </div> <!-- /form-actions -->
+                      </fieldset>
+                      </form>
+                    </div>
+
+                    <div class="tab-pane" id="2">
+                      <form id="edit-profile2" class="form-horizontal" />
+                      <fieldset>
+
+
+                        <div class="control-group">
+                          <label class="control-label" for="accounttype">账号类型</label>
+                          <div class="controls">
+                            <label class="radio">
+                              <input type="radio" name="accounttype" value="option1" checked="checked" id="accounttype" />
+                              POP3
+                            </label>
+                            <label class="radio">
+                              <input type="radio" name="accounttype" value="option2" />
+                              IMAP
+                            </label>
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="accountusername">账号名称</label>
+                          <div class="controls">
+                            <input type="text" class="input-large" id="accountusername" value="admin@js-css.cn" />
+                            <p class="help-block">填写你的邮箱地址.</p>
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="emailserver">邮件服务器</label>
+                          <div class="controls">
+                            <input type="text" class="input-large" id="emailserver" value="mail.js-css.cn" />
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="accountpassword">密码</label>
+                          <div class="controls">
+                            <input type="text" class="input-large" id="accountpassword" value="password" />
+                          </div>
+                        </div>
+
+
+
+
+                        <div class="control-group">
+                          <label class="control-label" for="accountadvanced">高级设置</label>
+                          <div class="controls">
+                            <label class="checkbox">
+                              <input type="checkbox" name="accountadvanced" value="option1" checked="checked" id="accountadvanced" />
+                              通过加密连接服务器
+                            </label>
+                            <label class="checkbox">
+                              <input type="checkbox" name="accounttype" value="option2" />
+                              通过连接下载所有信息
+                            </label>
+                          </div>
+                        </div>
+
+
+                        <br />
+
+                        <div class="form-actions">
+                          <button type="submit" class="btn btn-primary">保存</button> <button class="btn">取消</button>
+                        </div>
+                      </fieldset>
+                      </form>
+                    </div>
+
+                  </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+              </div> <!-- /widget-content -->
+
+            </div> <!-- /widget -->
+
+          </div> <!-- /span9 -->
+
+        </div> <!-- /row -->
+
+
+
+
+
+
+
+
+
+      </div> <!-- /span9 -->
+
+
+    </div> <!-- /row -->
+
+  </div> <!-- /container -->
+
+</div> <!-- /content -->
+
+
+<div id="footer">
+
+  <div class="container">
+    <hr />
+    <p>&copy; 2013 BlAdmin.</p>
+  </div> <!-- /container -->
+
+</div> <!-- /footer -->
+
+
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-1.7.2.min.js"></script>
+
+
+<script src="js/bootstrap.js"></script>
+
 </body>
 </html>

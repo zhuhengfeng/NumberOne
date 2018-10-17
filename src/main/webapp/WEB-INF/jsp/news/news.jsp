@@ -26,6 +26,8 @@
   <link rel='stylesheet' href='css/style_3.css' type='text/css' media='screen' />
   <link rel='icon' href='/chanzhi/data/upload/201410/f_a4d67a3ce7cd8d6229b0ae542da99e5c.ico' type='image/x-icon' />
   <link rel='shortcut icon' href='/chanzhi/data/upload/201410/f_a4d67a3ce7cd8d6229b0ae542da99e5c.ico' type='image/x-icon' />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
   <link href='/rss.xml' title='南京华苏科技有限公司' type='application/rss+xml' rel='alternate' /><!--[if lt IE 9]>
   <script src='js/all.ie8_1.js' type='text/javascript'></script>
   <![endif]-->
@@ -342,29 +344,27 @@
     </button>
     <a class='navbar-brand' href='/'><i class='icon-home'></i></a>
   </div>
-  <div class='collapse navbar-collapse' id='navbarCollapse' style='margin-top:16px;'>
-    <ul class='nav navbar-nav'>
-      <li class='nav-system-home'><a href='${pageContext.request.contextPath}/index' style="line-height:0px;padding-top:26px;padding-bottom:30px;">首页</a>
-      </li>
+ <div class='collapse navbar-collapse' id='navbarCollapse' style='margin-top:16px;'>
+    <ul class='nav navbar-nav' style="display: inline">
+      <li class='nav-system-home'><a href='${pageContext.request.contextPath}/index' style="line-height:0px;padding-top:26px;padding-bottom:30px;">首页</a></li>
       <li class="dropdown ">
-        <a href='' class="dropdown-toggle" style="line-height:0px" data-toggle="dropdown" >心路历程 <b class='caret' style=''></b></a>
+        <a href='' class="nav-article-0" style="line-height:0px" data-toggle="dropdown" >心路历程 <b class='caret' style=''></b></a>
         <ul class='dropdown-menu' role='menu'>
           <li class='nav-system-company'><a href='${pageContext.request.contextPath}/news' >忆往昔</a>
           </li>
           <li class='nav-page-2'><a href='${pageContext.request.contextPath}/news' >看今朝</a>
           </li>
-
+        </ul>
       </li>
       <!-- end nav2 -->
-    </ul>
-    <li class='nav-article-0'><a href='${pageContext.request.contextPath}/product' style="line-height:0px;padding-top:26px;padding-bottom:30px;">产品介绍</a>
-    </li>
-    <li class='nav-article-0'><a href='${pageContext.request.contextPath}/product' style="line-height:0px;padding-top:26px;padding-bottom:30px;">网络调查</a>
-    </li>
-    <li class='nav-page-8'><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">招贤纳士</a>
-    </li>
-    <li class='nav-page-8'><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">购物车</a>
-    </li>
+      <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">产品介绍</a>
+      </li>
+      <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">网络调查</a>
+      </li>
+      <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">招贤纳士</a>
+      </li>
+      <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">购物车</a>
+      </li>
     <!-- end nav1 -->
     </ul>
   </div>
@@ -404,198 +404,11 @@
       <div class='col-md-12 col-main'>
         <div class='list list-condensed'>
           <header><h2>新闻资讯</h2></header>
-          <section class='items items-hover'>
-            <div class='item'>
-              <div class='item-heading'>
-                <div class="text-muted pull-right">
-                  <span title="阅读"><i class='icon-eye-open'></i> 5071</span> &nbsp;
-                  <span title="评论"><i class='icon-comments-alt'></i> 0</span> &nbsp;
-                  <span title="发布时间"><i class='icon-time'></i> 2018-04-17</span>
-                </div>
-                <h4><a href='/news/296.html' >华苏“蚂蚁管车”参展中国电信智慧电动车研讨会</a>
-                </h4>
-              </div>
-              <div class='item-content'>
-                <div class='media pull-right'>
-                  <a href='/news/296.html' ><img src='picture/s_28cda01395a81a12dd232a2c3dce69b4.png' title='图片1' class='thumbnail' />
-                  </a>
-                </div>
-                <div class='text text-muted'>
-
-                  &nbsp; &nbsp; 4月11日下午，中国电信物联网智慧电动车市场、技术与研发研讨会在南京成功举行！来自全国各省的行业内外人士齐聚一堂，共话电动车在物联网背景下的新发展！
-                  &nbsp;
-                  &nbsp; &nbsp; 南京华苏科技有限...</div>
-              </div>
-            </div>
-            <div class='item'>
-              <div class='item-heading'>
-                <div class="text-muted pull-right">
-                  <span title="阅读"><i class='icon-eye-open'></i> 3773</span> &nbsp;
-                  <span title="评论"><i class='icon-comments-alt'></i> 0</span> &nbsp;
-                  <span title="发布时间"><i class='icon-time'></i> 2018-04-09</span>
-                </div>
-                <h4><a href='/news/295.html' >我司“基于RFID的室分管控物联网系统”荣获江苏省十大创新力产品</a>
-                </h4>
-              </div>
-              <div class='item-content'>
-                <div class='media pull-right'>
-                  <a href='/news/295.html' ><img src='picture/s_6dcdcb6e5561ab89dbce165b449f92a8.png' title='f_6dcdcb6e5561ab89dbce165b449f92a8.png' class='thumbnail' />
-                  </a>
-                </div>
-                <div class='text text-muted'>
-
-                  2018年4月3日下午，江苏省2017年度互联网十大新锐人物与创新力产品评选颁奖典礼在南京软件谷楚翘城会议中心落下帷幕。
-                  本次活动由江苏省经济和信息化委员会主办，创客公社承办，中国（南京）软件谷特别支持，各市经信主管部门、软件行业协会、...</div>
-              </div>
-            </div>
-            <div class='item'>
-              <div class='item-heading'>
-                <div class="text-muted pull-right">
-                  <span title="阅读"><i class='icon-eye-open'></i> 4139</span> &nbsp;
-                  <span title="评论"><i class='icon-comments-alt'></i> 0</span> &nbsp;
-                  <span title="发布时间"><i class='icon-time'></i> 2018-03-20</span>
-                </div>
-                <h4><a href='/news/294.html' >热烈庆祝华苏科技荣获 “江苏省博士后创新实践基地”称号</a>
-                </h4>
-              </div>
-              <div class='item-content'>
-                <div class='media pull-right'>
-                  <a href='/news/294.html' ><img src='picture/s_0a77e2c7abed36c07aad0bb9fdeec1f9.jpg' title='微信图片_20180320171652' class='thumbnail' />
-                  </a>
-                </div>
-                <div class='text text-muted'>2018年3月15日上午10点，南京华苏科技受邀参加了省人社厅组织的“江苏省博士后创新实践基地”授牌仪式。...</div>
-              </div>
-            </div>
-            <div class='item'>
-              <div class='item-heading'>
-                <div class="text-muted pull-right">
-                  <span title="阅读"><i class='icon-eye-open'></i> 4298</span> &nbsp;
-                  <span title="评论"><i class='icon-comments-alt'></i> 0</span> &nbsp;
-                  <span title="发布时间"><i class='icon-time'></i> 2018-03-14</span>
-                </div>
-                <h4><a href='/news/293.html' >“剩者”为王，主力格局初形成 破而后立，华苏力推“智”模式</a>
-                </h4>
-              </div>
-              <div class='item-content'>
-                <div class='media pull-right'>
-                  <a href='/news/293.html' ><img src='picture/s_6bcd94aad44ff47bb91aae445c7819df.jpg' title='640.webp' class='thumbnail' />
-                  </a>
-                </div>
-                <div class='text text-muted'>“剩者”为王，主力格局初形成破而后立，华苏力推“智”模式----写在全国首轮网优集采后。...</div>
-              </div>
-            </div>
-            <div class='item'>
-              <div class='item-heading'>
-                <div class="text-muted pull-right">
-                  <span title="阅读"><i class='icon-eye-open'></i> 4713</span> &nbsp;
-                  <span title="评论"><i class='icon-comments-alt'></i> 0</span> &nbsp;
-                  <span title="发布时间"><i class='icon-time'></i> 2018-02-25</span>
-                </div>
-                <h4><a href='/news/291.html' >锦华至，万物苏----2018华苏科技有限公司新春年会</a>
-                </h4>
-              </div>
-              <div class='item-content'>
-                <div class='media pull-right'>
-                  <a href='/news/291.html' ><img src='picture/s_6c6abcee865a5f547ec81be368b9994e.jpg' title='4K6A3534.JP' class='thumbnail' />
-                  </a>
-                </div>
-                <div class='text text-muted'>2月4日，2018华苏科技有限公司新春年会——【锦华至，万物苏 】燃情开幕。大家满怀喜悦迎接一场“团圆”相聚。...</div>
-              </div>
-            </div>
-            <div class='item'>
-              <div class='item-heading'>
-                <div class="text-muted pull-right">
-                  <span title="阅读"><i class='icon-eye-open'></i> 4676</span> &nbsp;
-                  <span title="评论"><i class='icon-comments-alt'></i> 0</span> &nbsp;
-                  <span title="发布时间"><i class='icon-time'></i> 2018-01-23</span>
-                </div>
-                <h4><a href='/news/290.html' >华苏科技荣获“2017年中国最具影响力软件和信息服务企业”</a>
-                </h4>
-              </div>
-              <div class='item-content'>
-                <div class='media pull-right'>
-                  <a href='/news/290.html' ><img src='picture/s_e392b62ba07ac897f59e5bd587bf5ce0.jpg' title='640.webp' class='thumbnail' />
-                  </a>
-                </div>
-                <div class='text text-muted'>2018年1月17日，“2018中国软件产业年会”在京隆重开幕！南京华苏科技有限公司（以下简称华苏科技）凭借在通信技术服务领域领先的行业地位及卓越的实践成果，获颁“2017年中国最具影响力软件和信息服务企业”重磅奖项。...</div>
-              </div>
-            </div>
-            <div class='item'>
-              <div class='item-heading'>
-                <div class="text-muted pull-right">
-                  <span title="阅读"><i class='icon-eye-open'></i> 5067</span> &nbsp;
-                  <span title="评论"><i class='icon-comments-alt'></i> 0</span> &nbsp;
-                  <span title="发布时间"><i class='icon-time'></i> 2017-11-10</span>
-                </div>
-                <h4><a href='/news/289.html' >我司获批博士后创新基地</a>
-                </h4>
-              </div>
-              <div class='item-content'>
-                <div class='media pull-right'>
-                  <a href='/news/289.html' ><img src='picture/s_6b88b6917a0f40013a4b7789c703aca9.jpg' title='飞信图片20170427161523' class='thumbnail' />
-                  </a>
-                </div>
-                <div class='text text-muted'>根据省人力资源社会保障厅（苏人社函[2017]302号）精神，我市南京华苏科技有限公司等9家单位获批设立江苏省博士后创新实践基地。 ...</div>
-              </div>
-            </div>
-            <div class='item'>
-              <div class='item-heading'>
-                <div class="text-muted pull-right">
-                  <span title="阅读"><i class='icon-eye-open'></i> 5591</span> &nbsp;
-                  <span title="评论"><i class='icon-comments-alt'></i> 0</span> &nbsp;
-                  <span title="发布时间"><i class='icon-time'></i> 2017-10-23</span>
-                </div>
-                <h4><a href='/news/288.html' >华苏科技“基于RFID的室分管控物联网系统”获创新三等奖</a>
-                </h4>
-              </div>
-              <div class='item-content'>
-                <div class='media pull-right'>
-                  <a href='/news/288.html' ><img src='picture/s_4063daae18efaea57d9b27fc767910e5.png' title='图片2' class='thumbnail' />
-                  </a>
-                </div>
-                <div class='text text-muted'>华苏科技全力打造的“基于RFID的室分管控物联网系统”，荣幸进入第二届江苏省科协青年会员创新创业大赛总决赛（信息技术领域）无锡赛区现场路演总决赛，经过激烈的精彩路演比拼，最终喜获创新组信息技术领域三等奖。...</div>
-              </div>
-            </div>
-            <div class='item'>
-              <div class='item-heading'>
-                <div class="text-muted pull-right">
-                  <span title="阅读"><i class='icon-eye-open'></i> 5140</span> &nbsp;
-                  <span title="评论"><i class='icon-comments-alt'></i> 0</span> &nbsp;
-                  <span title="发布时间"><i class='icon-time'></i> 2017-08-01</span>
-                </div>
-                <h4><a href='/news/284.html' >我司研究生工作站被评为江苏省优秀研究生工作站</a>
-                </h4>
-              </div>
-              <div class='item-content'>
-                <div class='media pull-right'>
-                  <a href='/news/284.html' ><img src='picture/s_e8e1437433b7cb0c49e86ed6304e9764.jpg' title='53e00728ce4e04afae77ac68ebe625f0' class='thumbnail' />
-                  </a>
-                </div>
-                <div class='text text-muted'>近日，江苏省教育厅与江苏省科学技术厅联合发布《关于公布2017年江苏省研究生工作站和优秀研究生工作站名单的通知》（苏教研[2017]7号），南京华苏科技有限公司与南京邮电大学共建的“研究生工作站 ”获评“ 2017年江苏省优秀研究生工作站”...</div>
-              </div>
-            </div>
-            <div class='item'>
-              <div class='item-heading'>
-                <div class="text-muted pull-right">
-                  <span title="阅读"><i class='icon-eye-open'></i> 6637</span> &nbsp;
-                  <span title="评论"><i class='icon-comments-alt'></i> 0</span> &nbsp;
-                  <span title="发布时间"><i class='icon-time'></i> 2017-04-21</span>
-                </div>
-                <h4><a href='/news/278.html' >荣誉是激励，强企是目标</a>
-                </h4>
-              </div>
-              <div class='item-content'>
-                <div class='media pull-right'>
-                  <a href='/news/278.html' ><img src='picture/s_57866e21ea80798a5d0a4f825161d01c.png' title='f_57866e21ea80798a5d0a4f825161d01c.png' class='thumbnail' />
-                  </a>
-                </div>
-                <div class='text text-muted'>华苏科技接连获得政府表彰。
-                  NO.1 华苏科技荣获《南京市高淳区区长质量提名奖》。
-                  本奖项作为引导、激励企业实施卓越的质量管理经营模式而设立，通过提高产品、工程、服务和环境质量，持续提升企业的经营业绩。华苏科技经过初审、复审和现场评审，最终...</div>
-              </div>
-            </div>
-          </section>
       </div>
+        <section class='items items-hover'>
+          <table class="table table-hover table-bordered" id="sampleTable">
+          </table>
+          </section>
       <!-- delete by liulang begin
       <div class='col-md-3 col-side'><side class='page-side'></side></div>
       -->
@@ -620,7 +433,7 @@
               用户登录<span class="tlinkaline" >|</span>
             </a>
             <a class="tlinka" href="${pageContext.request.contextPath}/reg" target="_black" >
-              用户注册<span class="tlinkaline" >|</span><span>${sessionUser.nickname}你好!</span>
+              用户注册<span class="tlinkaline" >|</span><span>${sessionUser.nickname}</span>
             </a>
 
 
@@ -744,5 +557,65 @@
     </div>
   </div>
   <style>#block24{}#block24 .panel-heading{}</style></div>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('#sampleTable').bootstrapTable({
+
+        url: 'users',
+        method:"post",
+        dataType: "json",
+        search: true,
+        silent:true,
+        searchOnEnterKey:true,
+        columns: [{
+          title:'全选',
+          field:'select',
+          checkbox:true,
+          width:25,
+          align:'center',
+          valign:'middle'
+        }, {
+          field: 'id',
+          title: 'ID'
+        }, {
+          field: 'newstitle',
+          title: 'Title'
+        }, {
+          field: 'newsdate',
+          title: 'Date'
+        }, {
+          field:"newsimg",
+          title:"Img",
+          formatter:function (value,row,index) {
+            return "<img height=\"30px\" width=\"70px\" src=${pageContext.request.contextPath}/"+row.newsimg+"></img>";
+          },
+        }],
+        pagination: true,
+        pageNumber:1,
+        pageSize:5,
+        pageList: [5, 10, 15, 20],
+        sidePagination: "server",
+        showRefresh: false,
+        toolbar: "#toolbar",
+        uniqueId: "id",
+        striped: true,
+        clickToSelect: true,
+      });
+    })
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?2c38c8d2444ca44769069110f332f59d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script></div>
+</div>
+</div>
+<style>#block24{}#block24 .panel-heading{}</style></div>
 </body>
 </html>
