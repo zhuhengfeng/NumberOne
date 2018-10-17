@@ -566,7 +566,7 @@
     $(function(){
       $('#sampleTable').bootstrapTable({
 
-        url: 'users',
+        url: 'newss',
         method:"post",
         dataType: "json",
         search: true,
@@ -606,6 +606,7 @@
         striped: true,
         clickToSelect: true,
       });
+
     })
     (function() {
       var hm = document.createElement("script");

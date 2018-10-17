@@ -16,11 +16,11 @@ public class NewsController {
 
     @RequestMapping(value="/{path}", method= RequestMethod.GET)
     public String toindex(@PathVariable String path){
-        return "index"+"/"+path;
+        return "news"+"/"+path;
     }
 
     @ResponseBody
-    @RequestMapping("/users")
+    @RequestMapping("/news")
     public Object limitpage(@RequestBody JSONObject jsonobject) throws Exception{
         System.out.println("1");
         jsonobject.put("total",ser.counttitle(jsonobject) );

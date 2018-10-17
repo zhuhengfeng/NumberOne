@@ -10,7 +10,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>NumberOne产品介绍</title>
+  <title>NumberOnE</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -48,7 +48,7 @@
         <span class="icon-bar"></span>
       </a>
 
-      <a class="brand" href="./">NumberOne</a>
+      <a class="brand" href="./">BlAdmin</a>
 
       <div class="nav-collapse">
 
