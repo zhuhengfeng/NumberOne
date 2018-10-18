@@ -85,6 +85,13 @@
   @media (min-width: 1920px) {#headTitle {left:19%;}}
 
   /* 顶部链接 */
+
+  /*  #navbarCollapse li {
+     float:left; !* 往左浮动 *!
+      }
+*/
+
+
   #hstopcontainer {width:100%;height:50px;position:absolute;top:0px;left:0px;margin:0;padding:0;}
   #hstopcontainer #hstopstyle {width:1180px;height:50px;margin:0 auto;border-top:6px solid #1d89d1;}
   #hstopstyle #hstoplink {min-width:440px;height:50px;line-height:50px;float:right;margin-right:12px;font-size:12px;font-famliy:'微软雅黑';color:#666; }
@@ -111,7 +118,8 @@
   #navbarCollapse { margin-top: 16px; height: auto;}
   #navbar .navbar-toggle { background-color:#21A1EF;}
   #navbar .navbar-toggle:hover, #navbar .navbar-toggle:focus {background-color:#1A8AD5;}
-  @media (max-width: 480px){#navbar .nav > li {width: 100%;}#navbarCollapse { position:absolute;background-color:#fff;margin-top: 0px !important; }}
+
+   @media (max-width: 480px){#navbar .nav > li {width: 100%;}#navbarCollapse { position:absolute;background-color:#fff;margin-top: 0px !important; }}
   @media (max-width: 767px){#navbar .nav > li {}#navbarCollapse { position:absolute;background-color:#fff;margin-top: 0px !important; }}
 
   /* 框架内容页上面蓝色条,及最小高度*/
@@ -298,6 +306,7 @@
   /*面包屑导航，FF,CHROME,小地图标识*/
   ul.breadcrumb:after {content:"";}
 
+
   /*底部导航，站点地图，图标标识,a链接hover,page-wrapper*/
   #footNav .icon-sitemap {display:none;}
   #footNav a:hover { color:#e91b23 !important; }
@@ -311,12 +320,14 @@
   /*输入框*/
   .form-control:focus{border-color:#347AEB;box-shadow:0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(52, 122, 235, 0.6);}
 
-  /*底部蝉知连接前缀*/
-  /*.icon-bell:before { content:"";}*/
 
   /*百度商桥底部蓝色咨询条，不知道为什么出现*/
   .jz_conv_8888_bottom-box { display: none; !important}
-  </style></head>
+  </style>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
+  <link rel="stylesheet" type="text/css" href="css/toastr.min.css">
+</head>
 <body>
 <div class='page-container'>
   <header id='header' class='clearfix' style="" >
@@ -341,60 +352,45 @@
       </div>
     </div>
   </header>
-  <style>#block12{}#block12 .panel-heading{}</style>    <nav id='navbar' class='navbar' role='navigation'>
-  <div class='navbar-header'>
-    <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#navbarCollapse'>
-      <span class='icon-bar'></span>
-      <span class='icon-bar'></span>
-      <span class='icon-bar'></span>
-    </button>
-    <a class='navbar-brand' href='/'><i class='icon-home'></i></a>
-  </div>
-  <div class='collapse navbar-collapse' id='navbarCollapse' style='margin-top:16px;'>
-    <ul class='nav navbar-nav'>
-      <li class='nav-system-home'><a href='${pageContext.request.contextPath}/index' style="line-height:0px;padding-top:26px;padding-bottom:30px;">首页</a>
-      </li>
-      <li class="dropdown ">
-        <a href='' class="dropdown-toggle" style="line-height:0px" data-toggle="dropdown" >心路历程 <b class='caret' style=''></b></a>
-        <ul class='dropdown-menu' role='menu'>
-          <li class='nav-system-company'><a href='${pageContext.request.contextPath}/news' >忆往昔</a>
-          </li>
-          <li class='nav-page-2'><a href='${pageContext.request.contextPath}/news' >看今朝</a>
-          </li>
+  <style>#block12{}#block12 .panel-heading{}</style>
+  <nav id='navbar' class='navbar' role='navigation'>
+    <div class='navbar-header'>
+      <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#navbarCollapse'>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+      </button>
+      <a class='navbar-brand' href='/'><i class='icon-home'></i></a>
+    </div>
+    <div class='collapse navbar-collapse' id='navbarCollapse' style='margin-top:16px;'>
+      <ul class='nav navbar-nav' style="display: inline">
+        <li class='nav-system-home'><a href='${pageContext.request.contextPath}/index' style="line-height:0px;padding-top:26px;padding-bottom:30px;">首页</a></li>
+        <li class="dropdown ">
+          <a href='' class="nav-article-0" style="line-height:0px" data-toggle="dropdown" >心路历程 <b class='caret' style=''></b></a>
+          <ul class='dropdown-menu' role='menu'>
+            <li class='nav-system-company'><a href='${pageContext.request.contextPath}/news' >忆往昔</a>
+            </li>
+            <li class='nav-page-2'><a href='${pageContext.request.contextPath}/news' >看今朝</a>
+            </li>
+          </ul>
+        </li>
+        <!-- end nav2 -->
+        <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">产品介绍</a>
+        </li>
+        <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">网络调查</a>
+        </li>
+        <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">招贤纳士</a>
+        </li>
+        <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">购物车</a>
+        </li>
+        <!-- end nav1 -->
+      </ul>
+    </div>
+  </nav>
 
-      </li>
-      <!-- end nav2 -->
-    </ul>
-    <li class='nav-article-0'><a href='${pageContext.request.contextPath}/product' style="line-height:0px;padding-top:26px;padding-bottom:30px;">产品介绍</a>
-    </li>
-    <li class='nav-article-0'><a href='${pageContext.request.contextPath}/product' style="line-height:0px;padding-top:26px;padding-bottom:30px;">网络调查</a>
-    </li>
-    <li class='nav-page-8'><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">招贤纳士</a>
-    </li>
-    <li class='nav-page-8'><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">购物车</a>
-    </li>
-    <!-- end nav1 -->
-    </ul>
-  </div>
-</nav>
   <!-- add nidun 2014.12.11 -->
-  <script type="text/javascript">
-    $(function(){
 
-      /*$("#navbarCollapse .nav li").click(function(){
 
-       $(this).parents(".dropdown").css({"background-color":"#1a8ad5",color:"#fff"});
-       });*/
-
-      //alert($("#navbarCollapse .nav-page-2 a").length);
-
-      //$("#navbarCollapse .dropdown-menu a").click(function(){
-      //	var color = $(this).css("background-color");
-      //	$(this).parent().parent().parent().find("a").eq(0).css({"background-color":color,color:"#fff"});
-      //});
-
-    });
-  </script>
   <div class='page-wrapper'>
     <div class='page-content'>
       <script language='javascript'>$(function() {$(".tree").treeview({collapsed: false, unique: false}) })</script>
@@ -430,13 +426,7 @@
       //初始化时隐藏所有，显示右边第一个
       showThis('#rightCon',0);
       //遍历链接按钮，绑定click事件
-      $('#leftNav li span.zpnava').each(function(i){
-        $(this).bind('mouseover click', function(){
-          showThis('#rightCon',i);
-        });
-      });
 
-    });
     /* 右边切换 */
     function showThis(JQobj,num){
       //左边导航样式
@@ -450,7 +440,7 @@
         showObj.show();
         //showObj.slideDown('fast');//滑动
       } else {
-        alert('后台有错，左边导航和右边内容不匹配，请每一个导航对应右边一个内容');
+
         showObj = obj.find('.showblock').eq(0);
         showObj.show();
         //showObj.slideDown('fast');//滑动
@@ -458,200 +448,20 @@
     }
     </script>
       <ul class="breadcrumb"><li><span class='breadcrumb-title'>当前位置：</span><a href='/' >首页</a>
-      </li><li>招贤纳士</li></ul><div class='row'>
-      <div class='col-md-12'>
-        <div class='article'>
-          <!-- delete by liulang begin
-        <header>
-          <h1>招贤纳士</h1>
-        </header>
-        end -->
-          <section class='article-content'>
-            <div id="joinus"><div class="resume_link"><a href="http://search.51job.com/list/co,c,1997504,000000,10,1.html" target="_blank">我要投简历</a></div>
-              <div id="leftNav"><ul class="ulnone"><li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/12.html' class='tag-link'>无线网络优化</a>
-<a href='http://www.howso.cn/product/14.html' class='tag-link'>工程</a>
-师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/13.html' class='tag-link'>GSM</a>
-<a href='http://www.howso.cn/product/12.html' class='tag-link'>优化</a>
-工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/13.html' class='tag-link'>CDMA</a>
-网优工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/13.html' class='tag-link'>WCDMA</a>
-网优工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/13.html' class='tag-link'>TD</a>
-优化工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText">Java中高级工程师</span><span class="icongt">&gt;</span></a></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText"><a href='http://www.howso.cn/product/11.html' class='tag-link'>IOS</a>
-开发工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText">Android开发工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText">GIS软件开发工程师</span><span class="icongt">&gt;</span></span></li>
-                <li><span href="javascript:void(0)" class="zpnava"><span class="navText">培训讲师</span><span class="icongt">&gt;</span></span></li>
-              </ul>
-              </div>
-              <div id="rightCon"><div class="showblock"><div class="h3">职位描述</div>
-                <div class="h4">工作职责:</div>
-                <ul class="ulnone"><li>1. 运用路测软件和OMC数据进行网络分析，对无线网络提出评估性优化建议。</li>
-                  <li>2. 负责网络性能报表统计与分析，并提出优化建议及<a href='http://www.howso.cn/product/14.html' class='tag-link'>实施</a>
-                    跟踪。</li>
-                  <li>3. 对各项优化建议进行落实，完成各项无线网络优化工作。</li>
-                  <li>4. 协助项目团队完成网络优化工作。</li>
-                  <li>5. 配合当地项目经理安排的其他事务。</li>
-                </ul>
-                <div class="lineStyle"></div>
-                <div class="h4">岗位要求：</div>
-                <ul class="ulnone"><li>1. 通信、微波、无线传播、电子通信或计算机相关专业本科毕业生。</li>
-                  <li>2. 责任心强，工作踏实，思维敏捷，品行端正，有良好的沟通协调能力和环境适应能力。</li>
-                  <li>3. 能适应长较强的工作压力。</li>
-                  <li>4. 熟悉计算机操作，熟练运用WORD、EXCEL等软件的使用。</li>
-                  <li>5. 有相关工作经验者优先。</li>
-                </ul>
-              </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 具有良好的移动通信知识，熟悉GSM产品原理、信令流程、通信协议、电磁理论、无线通信等。</li>
-                    <li>2. 至少1年的<a href='http://www.howso.cn/product/12.html' class='tag-link'>无线网络规划</a>
-                      和优化的实际工作经验。</li>
-                    <li>3. 良好的沟通技巧和团队协作能力。</li>
-                    <li>4. 有华为、中兴上岗证或者参加过相关技术培训，有两年以上网优经验，担当项目TL者优先。</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 大专以上学历，通信、电子、计算机等相关专业。</li>
-                    <li>2. CDMA网规网优2年以上经验，MOTOROLA 、爱立信、 中兴 、华为、 朗讯 、北电 或 三星 CDMA网规网优2年以上经验，参与过大中城市的CDMA网络优化工作。</li>
-                    <li>3. 精通CDMA系统各协议，熟练掌握信令流程分析，具有丰富的解决问题的能力，并且能够指导他人工作。</li>
-                    <li>4. 熟悉网络系统参数原理、配置、调整、提取等内容。</li>
-                    <li>5. 丰富的RF优化经验，对网规网优工具和软件熟练应用，如：cait、actix、mapinfo、话统分析、参数分析等。</li>
-                    <li>6. 此岗位需要全部出差。</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">工作职责:</div>
-                  <ul class="ulnone"><li>1. 独立运用路测软件和OMC数据进行网络分析，对无线网络提出评估性优化建议。</li>
-                    <li>2. 对一系列可行性优化建议进行落实，完成无线网络优化工作。</li>
-                    <li>3. 和客户有良好的沟通，有项目风险正确识别和处理能力，带领整个团队完成优化工作。</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">岗位要求：</div>
-                  <ul class="ulnone"><li>1. 相关专业专科以上学历。</li>
-                    <li>2. 具备良好的移动通信知识，熟悉GSM或WCDMA产品原理、信令流程、通信协议、电磁理论、无线传播、天线系统等。</li>
-                    <li>3. 至少两年的无线网络规划和网络优化的实际工作经验，至少1年的后台系统分析经验。不符合请勿投。</li>
-                    <li>4. 良好的沟通技巧和团队协作能力，能适应长期的差旅生活。</li>
-                    <li>5. 要求有无线通信、微波、无线传播、天线、电子通信或相关专业的大专以上学历。</li>
-                    <li>6. 爱立信、卡特、华为、中兴、摩托等设备厂家G网和WCDMA双网都有系统优化经验者，优先考虑。</li>
-                    <li>7. 有华为、中兴上岗证或者参加过相关技术培训，有三年以上网优经验，担当项目TL，优先考虑。</li>
-                    <li>8. 英语良好者者优先考虑。</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">工作职责:</div>
-                  <ul class="ulnone"><li>1. 独立运用鼎立路测软件和OMC/LMT数据进行网络分析（华为、中兴、大唐），对无线网络提出评估性优化建议。</li>
-                    <li>2. 对一系列优化建议进行调整落实，完成无线网络优化工作。</li>
-                    <li>3. KPI指标监控、TOPN 小区问题处理，配合完成各种<a href='http://www.howso.cn/product/13.html' class='tag-link'>专项优化</a>
-                      任务。</li>
-                    <li>4. 和客户之间有良好的沟通，能够正确识别项目风险并处理，带领整个团队完成优化工作。</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">岗位要求：</div>
-                  <ul class="ulnone"><li>1. 本科以上学历，需要通过英语四级。大专学历需要有二年以上工作经验。不符合请勿投。</li>
-                    <li>2. 具备良好的移动通信知识，熟悉华为/大唐/中兴/爱立信TD-<a href='http://www.howso.cn/product/13.html' class='tag-link'>SCDMA</a>
-                      产品原理、指标（KPI）及计数器定义、信令流程、通信协议、电磁理论、无线传播、天线系统等。</li>
-                    <li>3. 至少两年厂商设备的无线网络规划和网络优化的实际工作经验，参与过厂商或者移动比较大型的优化项目，至少1年的后台系统分析经验或2年的前台分析优化经验。</li>
-                    <li>4. 良好的沟通技巧和团队协作能力，能适应长期的差旅生活。</li>
-                    <li>5. 有华为、中兴上岗证或者参加过相关技术培训，有三年以上网优经验，担当项目TL，有过专项优化，优先考虑。</li>
-                    <li>6. 同时具备其他厂家GSM网优经验者优先</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 计算机或相关专业本科以上学历。</li>
-                    <li>2. 3年以上的J2EE开发工作经验、1年以上的系统架构设计经验；精通面向对象设计思想，具有扎实的Java编程功底和良好的编码规范。</li>
-                    <li>3. 精通项目开发过程中的各个阶段的任务及其输出物。</li>
-                    <li>4. 精通Struts,spring,hibernate,ibatis等常用框架。</li>
-                    <li>5. 熟悉Tomcat、Jboss、weblogic、apache等多种应用和WEB服务器的配置。</li>
-                    <li>6. 有丰富的数据库设计经验，精通sql语言，并熟悉Oracle、Mysql数据库系统。</li>
-                    <li>7. 对系统架构设计有一定的理解，熟练HTML语言、JavaScript脚本语言、XML语言 ，了解当前流行的javascript开源框架。。</li>
-                    <li>8. 工作主动性强，耐心细致，有责任心；能承受一定压力，有良好的沟通能力与团队合作精神。</li>
-                    <li>9. 有通信行业工作经验者优先。</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">岗位职责 :</div>
-                  <ul class="ulnone"><li>1. 根据需求完成iOS应用开发任务。</li>
-                    <li>2. 了解底层接口开发。</li>
-                    <li>3. 负责编写和<a href='http://www.howso.cn/product/14.html' class='tag-link'>维护</a>
-                      设计文档。</li>
-                    <li>4. 负责执行单元自测，并与测试人员共同做好质量控制。</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 本科以上学历，计算机及电子信息相关专业</li>
-                    <li>2. 了解底层接口开发</li>
-                    <li>3. 精通项目开发过程中的各个阶段的任务及其输出物</li>
-                    <li>4. 精通Objective-C，精通IOS SDK中的UI、网络、数据库、JSON解析等开发技巧</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">能力要求 :</div>
-                  <ul class="ulnone"><li>1. 熟练使用iPhone SDK、XCode、Interface Builder等开发工具 ，熟练掌握常用API。丰富的Objective-C经验，熟悉设计模式，能够设计灵活的iOS产品架构，熟悉iPhone/iPad各个版本之间的差异，并且能够提供良好的解决方案。</li>
-                    <li>2. 精通Socket通信、TCP/IP和XML等网络协议，熟悉多线程及面向对象编程，熟悉SQLite数据库编程。</li>
-                    <li>3. 熟练使用Xcode的Instrument来诊断和调试问题，熟练编写Xcode下的单元测试。了解Xcode下的自动化测试。</li>
-                    <li>4. 能独立承担开发高性能的iOS应用，熟练掌握多线程程序设计技术，iOS平台UI、线程、消息和进程通信机制。</li>
-                    <li>5. 有app store线上作品者、熟悉<a href='http://www.howso.cn/product/11.html' class='tag-link'>移动互联网</a>
-                      、有Scrum敏捷开发经验优先。</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">岗位职责 :</div>
-                  <ul class="ulnone"><li>1. 负责Android客户端软件的架构设计、开发和维护。</li>
-                    <li>2. 规范编写设计和维护文档。</li>
-                    <li>3. 独立完成移动终端产品应用的功能模块开发，独立解决问题。</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 精通Java开发语言和Android平台UI，熟练运用eclipse/ADT开发工具。</li>
-                    <li>2. 精通网络开发（<a href='http://www.howso.cn/product/13.html' class='tag-link'>GPRS</a>
-                      、3G、Wifi），在上述不同网络环境下与后台服务进行各种类型数据交互。</li>
-                    <li>3. 熟悉Android 端sqllite的应用，有sqllite与服务端数据同步经验。</li>
-                    <li>4. 具备良好的职业素养和团队协作精神，以及较强的学习能力，可独立承担开发任务</li>
-                    <li>5. 优先考虑有监控软件设计开发经验的人员</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 计算机软件、地理信息系统、遥感等相关专业毕业，专科及以上学历。</li>
-                    <li>2. 2年以上GIS开发工作经验。</li>
-                    <li>3. 熟练使用主流GIS平台软件，如ArcGIS等，有二次开发经验。</li>
-                    <li>4. 熟练使用Arc map工具、熟练AE开发流程、熟练基于flex的WEBGIS开发</li>
-                    <li>5. 熟悉Oracle等大型数据库及SQL语言</li>
-                    <li>6. 熟悉 javascript、html、css</li>
-                    <li>7. 工作积极主动，沟通协调能力强，具备良好的职业道德意识与团队合作精神</li>
-                  </ul>
-                </div>
-                <div class="showblock"><div class="h3">职位描述</div>
-                  <div class="h4">岗位职责 :</div>
-                  <ul class="ulnone"><li>1. 制定公司培训工作规范、流程和培训方案。</li>
-                    <li>2. 调查培训需求，编制、调整、执行培训计划</li>
-                    <li>3. 开发培训课程，编制培训课件和建立企业培训资料库</li>
-                    <li>4. 讲授培训课程，解答疑难问题等</li>
-                    <li>5. 撰写培训报告，反馈、评估培训效果</li>
-                    <li>6. 跟进培训工作效果对培训工作进行改进</li>
-                  </ul>
-                  <div class="lineStyle"></div>
-                  <div class="h4">任职要求 :</div>
-                  <ul class="ulnone"><li>1. 三年以上通信工作经验，一年以上培训管理相关工作经验优先，常驻地南京或需短期出差。</li>
-                    <li>2. 熟悉相关业务，熟练使用现代培训工具，具备较强课程研发能力、良好的演讲能力。</li>
-                    <li>3. 富有激情，较强的亲和力和感染力、良好的文字和语言表达能力、沟通能力，思维敏捷。</li>
-                    <li>4. 熟练使用办公软件，可制作课件。</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="clear"></div>
-            </div>
-            <div class="clear"></div>      </section>
-          <section>
-          </section>
-          <footer>
-          </footer>
+      </li><li>网络调查</li></ul>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tile">
+
+            <table id="mytable"></table>
+          </div>
+        </div>
+      </div>
+      <section class='article-content'>
+        <div class="clear"></div>      </section>
+      <section>
+      </section>
         </div>
       </div>
     </div>
@@ -676,17 +486,119 @@
 
       </div>
 
-      <style>#block21{}#block21 .panel-heading{}</style>  </div></div>  <footer id='footer' class='clearfix'>
+
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">查看详情</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group ">
+          <label for="sName" class="col-xs-3 control-label">邮箱</label>
+          <div class="col-xs-8 ">
+            <input type="text" class="form-control input-sm duiqi" name="mail" id="add_mail" >
+          </div>
+        </div>
+        <div class="form-group ">
+          <label for="sName" class="col-xs-3 control-label">手机号</label>
+          <div class="col-xs-8 ">
+            <input type="text" class="form-control input-sm duiqi" name="telephone" id="add_telephone" >
+          </div>
+        </div>
+        <div class="form-group ">
+          <label for="sName" class="col-xs-3 control-label">QQ</label>
+          <div class="col-xs-8 ">
+            <input type="text" class="form-control input-sm duiqi" name="qq" id="add_qq" >
+          </div>
+        </div>
+        <div class="form-group ">
+          <label for="sName" class="col-xs-3 control-label">标题</label>
+          <div class="col-xs-8 ">
+            <input type="text" class="form-control input-sm duiqi" name="title" id="add_title" >
+          </div>
+        </div>
+        <div class="form-group ">
+          <label for="sName" class="col-xs-3 control-label">内容</label>
+          <div class="col-xs-8 ">
+            <input type="text" class="form-control input-sm duiqi" name="comment" id="add_comment" >
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">提交更改</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+
+
+
+
+ <style>#block21{}#block21 .panel-heading{}</style>  </div></div>
+
+<footer id='footer' class='clearfix'>
   <div class='wrapper'>
       <span id='copyright'>
         &copy; 2018 南京华苏科技有限公司&nbsp;&nbsp;      </span>
-    <!--  ��֪ͼ�� liulang 20141021 -->
-    <!--
-    <div id='powerby'>
-       <span id='poweredBy'><a href='http://www.chanzhi.org/?v=3.1' target='_blank' title='蝉知门户，开源免费的企业建站系统!'><i class='icon icon-bell'></i> 蝉知 3.1</a></span>      </div>
-    -->
+
   </div>
 </footer>
+  //jquery 插件
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  //bootstrap 插件
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+
+  <script  type="text/javascript">
+
+    $(function(){
+    //初始化表格
+    $('#mytable').bootstrapTable({
+    //列参数
+    columns: [{ field: 'mail', title: '邮箱' }, { field: 'telephone', title: '手机号' }, { field: 'qq', title: 'QQ' }, { field: 'title', title: '标题' }
+    ,{ field: 'comment', title: '内容' }],
+    //要绑定的数据
+    //这里绑定的是死数据，如果使用的客户端分页的json格式：[{},{},{}]
+    //如果使用的服务端分页,json格式如下：{total:98,rows:[{},{}]}
+    //请求地址
+    url: 'users',
+    //请求方式
+    method: 'post',
+    //              data: [{ id: 1, name: 'Item 1', price: '$1' }, { id: 2, name: 'Item 2', price: '$2' }, { id: 3, name: 'Item 3', price: '$3' }],
+    //打开搜索框
+  //  search: true,
+    //工具按钮用哪个容器
+    toolbar:'#toolbar',
+
+    //按回车键后进行搜索
+    searchOnEnterKey: true,
+    //是否显示所有的列
+   // showColumns:true,
+    //显示刷新按钮
+   // showRefresh:true,
+    //单选checkbox
+    singleSelect : true,
+    //开启分页功能
+    pagination: true,
+    //第一次加载第一页
+    pageNumber: 1,
+    //每页显示条数
+    pageSize: 5,
+    //分页方式：默认客户端分页，修改为服务端分页
+    sidePagination: 'server'
+
+
+    });
+    });
+
+
+</script>
 
   <script language='Javascript'>$(document).ready(function()
   {
@@ -695,21 +607,6 @@
 
   </script>
   <a href='#' id='go2top' class='icon-arrow-up' data-toggle='tooltip' title='返回顶部'></a>
-</div><div id='rightDocker' class='hidden-xs'>
-  <button id='rightDockerBtn' class='btn' data-toggle="popover" data-placement="left" data-target='$next'><i class='icon-qrcode'></i></button>
-  <div class='popover fade'>
-    <div class='arrow'></div>
-    <div class='popover-content docker-right'>
-      <table class='table table-borderless'>
-        <tr>
-          <td>
-            <div class='heading'><i class='icon-mobile-phone'></i> 移动访问</div>
-            <img src='picture/356a9ff3917d40c785b4bfce1af1b771.gif' width='200' height='200' data-src='/misc-qrcode.html' />
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
 </div>
 <div class='hide'><div id="block23" class='panel panel-block ' >
   <div class='panel-heading'>
@@ -752,6 +649,11 @@
     </div>
   </div>
   <style>#block24{}#block24 .panel-heading{}</style></div>
+
+
+
+
+
 </body>
 </html>
 

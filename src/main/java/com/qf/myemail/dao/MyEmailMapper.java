@@ -11,10 +11,14 @@ import java.util.List;
 public interface MyEmailMapper {
 	
 	
-	public Integer selectcount(JSONObject jsonobject) throws Exception;
-	public List<User> selectbylimit(JSONObject jsonobject) throws Exception;
-	public void insertbook(User user)throws Exception;
-	public User selectbyid(User user)throws Exception;
-	public void updateuser(User user)throws Exception;
-	public void deleteuser(User user)throws Exception;
+	public Integer countUser(JSONObject jsonobject) throws Exception;
+
+	public List<User> listUser(JSONObject jsonobject) throws Exception;
+
+	public void insertUser(User user) throws Exception;
+
+	public void deleteById(int id) throws Exception;
+
+	public void changeById(User user)throws Exception;
+	public User findUserById(int id) throws Exception;
 }
