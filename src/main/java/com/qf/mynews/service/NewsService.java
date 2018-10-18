@@ -47,4 +47,9 @@ public class NewsService implements INewsService{
 		int i=map.updatenews(news);
 		return i;
 	}
+	@Override
+	public News findxq(News news)throws Exception{
+
+		return map.selectxq(news);
+	}
 }

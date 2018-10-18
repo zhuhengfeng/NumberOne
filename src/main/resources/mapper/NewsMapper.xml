@@ -22,4 +22,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <update id="updatenews" parameterType="News">
         update  tb_news set newstitle=#{newstitle},newsdate=#{newsdate},newsimg=#{newsimg} where id=#{id}
     </update>
+    <select id="selectxq" parameterType="News" resultType="News">
+        select xq from tb_news where id=#{id}
+    </select>
 </mapper>

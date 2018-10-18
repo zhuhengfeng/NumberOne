@@ -34,7 +34,6 @@ public class NewsController {
     }
     @RequestMapping(value="/user",method= RequestMethod.POST)
     public String  Innernews(News news,@RequestParam MultipartFile img,HttpServletRequest request) throws Exception{
-        System.out.println(news);
         String savepath=("D:/best/src/main/webapp/picture/"+img.getOriginalFilename());
         File file = new File(savepath);
         //使用transferTo方法上传到指定位置
@@ -46,7 +45,6 @@ public class NewsController {
     }
     @RequestMapping(value="/updatenews",method= RequestMethod.PUT)
     public String  changenews(News news,@RequestParam MultipartFile img) throws Exception{
-        System.out.println(news);
         String savepath=("D:/best/src/main/webapp/picture/"+img.getOriginalFilename());
         File file = new File(savepath);
         //使用transferTo方法上传到指定位置
@@ -63,5 +61,15 @@ public class NewsController {
         news.setId(id);
         int i=ser.removenews(news);
         return i;
+    }
+    @ResponseBody
+    @RequestMapping(value="/newsxq/{id}", method=RequestMethod.GET)
+    public News newsxq(@PathVariable int id) throws Exception{
+        System.out.println(id);
+        News news=new News();
+        News news1=new News();
+        news.setId(id);
+        news1=ser.findxq(news);
+        return news1;
     }
 }

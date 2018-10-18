@@ -14,4 +14,5 @@ public interface NewsMapper {
     public int insertnews(News news)throws Exception;
     public int deletenews(News news)throws Exception;
     public int updatenews(News news)throws Exception;
+    public News selectxq(News news)throws Exception;
 }

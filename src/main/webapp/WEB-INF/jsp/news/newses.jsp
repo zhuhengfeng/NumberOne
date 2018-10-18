@@ -407,6 +407,30 @@
           <header><h2>新闻资讯</h2></header>
       </div>
         <section class='items items-hover'>
+          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="btn1">详情</button>
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">
+                    新闻详情
+                  </h4>
+                </div>
+
+                  <div class="modal-body">
+                    <area type="text" id="xq" name="xq" readonly="readonly">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                  </div>
+
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+          </div>
           <table class="table table-hover table-bordered" id="sampleTable">
           </table>
           </section>
@@ -567,7 +591,7 @@
     $(function(){
       $('#sampleTable').bootstrapTable({
 
-        url: 'newss',
+        url: 'news',
         method:"post",
         dataType: "json",
         search: true,
@@ -588,7 +612,10 @@
           title: 'Title'
         }, {
           field: 'newsdate',
-          title: 'Date'
+          title: 'Date',
+          formatter:function(value,row,index){
+            return changeDateFormat(value)
+          }
         }, {
           field:"newsimg",
           title:"Img",
@@ -609,6 +636,54 @@
       });
 
     })
+    function changeDateFormat(cellval) {
+      var dateVal = cellval + "";
+      if (cellval != null) {
+        var date = new Date(parseInt(dateVal.replace("/Date(", "").replace(")/", ""), 10));
+        var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+        var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+
+        var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+        var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+
+        return date.getFullYear() + "-" + month + "-" + currentDate + " " + hours + ":" + minutes + ":" + seconds;
+      }
+      else{
+        alert(null);
+      }
+
+    }
+    function changeDateFormat1(cellval) {
+      var dateVal = cellval + "";
+      if (cellval != null) {
+        var date = new Date(parseInt(dateVal.replace("/Date(", "").replace(")/", ""), 10));
+        var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+        var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+
+        var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+        var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+
+        return date.getFullYear() + "-" + month + "-" + currentDate;
+      }
+      else {
+        alert(null);
+      }
+    }
+    $("#btn1").click(function(){
+      var dataArr=$('#sampleTable').bootstrapTable('getSelections');
+      var id=dataArr[0].id;
+      $.post(
+              'newsxq/' +id,
+              {'_method': 'GET'},
+              function (data) {
+               $("#xq").text(data.xq);
+               /* alert(JSON.stringify(data));*/
+              }
+      );
+
+    });
     (function() {
       var hm = document.createElement("script");
       hm.src = "//hm.baidu.com/hm.js?2c38c8d2444ca44769069110f332f59d";

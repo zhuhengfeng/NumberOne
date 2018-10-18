@@ -10,7 +10,7 @@ import java.util.Date;
 public class News {
     private int id;
     private String newstitle;
-
+    private String xq;
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date newsdate;
     private String newsimg;
@@ -45,5 +45,13 @@ public class News {
 
     public void setNewsimg(String newsimg) {
         this.newsimg = newsimg;
+    }
+
+    public String getXq() {
+        return xq;
+    }
+
+    public void setXq(String xq) {
+        this.xq = xq;
     }
 }
