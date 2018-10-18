@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qf.myproducts.dao.ProductMapper">
+	<!-- `pid` varchar(255) DEFAULT NULL,
+  `pname` varchar(255) DEFAULT NULL,
+  `market_price` double DEFAULT NULL,
+  `shop_price` double DEFAULT NULL,
+  `pimage` varchar(255) DEFAULT NULL,
+  `pdesc` varchar(255) DEFAULT NULL,
+  `is_hot` int(11) DEFAULT NULL,
+  `pdate` date DEFAULT NULL,
+  `pflag` int(11) DEFAULT NULL,
+  `cid` varchar(255) DEFAULT NULL -->
+	<insert id="insert" parameterType="com.qf.myproducts.model.Product">
+		insert into product (pid,pname,market_price,shop_price,pimage,pdesc,is_hot,pdate,pflag,cid)
+		value(#{pid},#{pname},#{market_price},#{shop_price},#{pimage},#{pdesc},#{is_hot},#{pdate},#{pflag},#{cid})
+	
+	</insert>
+	
+	<delete id="delete">
+		delete from product where pid=#{pid}
+	</delete>
+	
+	<update id="update" parameterType="com.qf.myproducts.model.Product">
+		update product set pname=#{pname},market_price=#{market_price},shop_price=#{shop_price},
+		pimage=#{pimage},pdesc=#{pdesc},is_hot=#{is_hot},pdate=#{pdate},
+		pflag=#{pflag},cid=#{cid} where pid=#{pid}
+	</update>
+	
+	<select id="selectAll" resultType="com.qf.myproducts.model.Product">
+		select * from product 
+	</select>
+	
+	<select id="selectById" resultType="com.qf.myproducts.model.Product">
+		select * from product where id=#{id}
+	</select>
+	
+	<!-- 获得total数据 -->
+	<select id="selectCount" resultType="java.lang.Long">
+		select count(*) from product
+		where 1=1
+		<if test="search!=null and search!=''">
+			and pname like concat('%',#{search},'%')
+		</if>
+		<if test="search!=null and search!=''">
+			or market_price like concat('%',#{search},'%')
+		</if>
+	</select>
+	
+	<!-- 获得limit数据 -->
+	<select id="selectByLimit" resultType="com.qf.myproducts.model.Product">
+		select * from product 
+		where 1=1
+		<if test="search!=null and search!=''">
+			and pname like concat('%',#{search},'%')
+		</if>
+		<if test="search!=null and search!=''">
+			or market_price like concat('%',#{search},'%')
+		</if>
+		limit #{offset},#{limit}	
+	</select>
+	
+	
+	
+	
+	
+	
+</mapper>

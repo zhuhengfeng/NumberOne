@@ -33,6 +33,7 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
        <mvc:resources location="/css/" mapping="/css/**"></mvc:resources>
        <mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
        <mvc:resources location="/picture/" mapping="/picture/**"></mvc:resources>
+       <mvc:resources location="/photo/" mapping="/photo/**"></mvc:resources>
 
 
        <bean name="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

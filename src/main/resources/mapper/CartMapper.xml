@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qf.myproducts.dao.CartMapper">
+    
+    <insert id="insert" parameterType="com.qf.myproducts.model.Cart">
+        insert into cart (uid,username,pid) VALUES (#{uid},#{username},#{pid})
+    </insert>
+
+    <delete id="delete">
+        delete from cart where id=#{id}
+    </delete>
+
+    <update id="update" parameterType="com.qf.myproducts.model.Cart">
+        update cart set uid=#{uid},username=#{username},pid=#{pid} where id=#{id}
+    </update>
+
+    <select id="selectById" resultType="com.qf.myproducts.model.Cart">
+        select * from cart where id=#{id}
+    </select>
+
+    <select id="selectByFromId" resultType="com.qf.myproducts.model.Cart">
+        SELECT * from cart where uid=#{uid}
+    </select>
+
+    <select id="selectByPid" resultType="com.qf.myproducts.model.Cart">
+        select * from cart where pid=#{pid}
+    </select>
+
+    <select id="selectAll" parameterType="com.qf.myproducts.model.Cart" resultMap="baseResultMap1">
+        SELECT * FROM cart c LEFT JOIN product p ON c.pid=p.pid
+    </select>
+
+    <resultMap id="baseResultMap1" type="com.qf.myproducts.model.Cart">
+        <id property="id" column="id"></id>
+        <result property="uid" column="uid"></result>
+        <result property="username" column="username"></result>
+        <result property="pid" column="pid"></result>
+        <association property="product" javaType="com.qf.myproducts.model.Product">
+           <id property="pid" column="pid"></id>
+            <result property="pname" column="pname"></result>
+            <result property="market_price" column="market_price"></result>
+        </association>
+
+    </resultMap>
+
+    <!-- 获得total数据 -->
+    <select id="selectCount" resultType="java.lang.Long">
+        select count(*) from cart
+        where 1=1
+        <if test="search!=null and search!=''">
+            and uid like concat('%',#{search},'%')
+        </if>
+        <if test="search!=null and search!=''">
+            or username like concat('%',#{search},'%')
+        </if>
+    </select>
+
+<!--    &lt;!&ndash; 获得limit数据 &ndash;&gt;
+    <select id="selectByLimit" resultMap="baseResultMap1">
+        SELECT c.id,c.uid,c.username,c.pid,p.pname AS pname FROM cart c LEFT JOIN product p ON c.pid=p.pid
+        where 1=1
+        <if test="search!=null and search!=''">
+            and uid like concat('%',#{search},'%')
+        </if>
+        <if test="search!=null and search!=''">
+            or username like concat('%',#{search},'%')
+        </if>
+        limit #{offset},#{limit}
+    </select>-->
+
+    <!-- 获得limit数据 -->
+    <select id="selectByLimit" resultType="com.qf.myproducts.model.CartVO">
+        SELECT c.id,c.uid,c.username,c.pid,p.pname AS pname FROM cart c LEFT JOIN product p ON c.pid=p.pid
+        where 1=1
+        <if test="search!=null and search!=''">
+            and uid like concat('%',#{search},'%')
+        </if>
+        <if test="search!=null and search!=''">
+            or username like concat('%',#{search},'%')
+        </if>
+        limit #{offset},#{limit}
+    </select>
+
+
+    
+</mapper>
