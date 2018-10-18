@@ -32,7 +32,7 @@
        <!-- mapper接口代理对像创建由spring完成 -->
        <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
               <!-- 扫描mapper包下接口，生成代理对像 -->
-              <property name="basePackage" value="com.qf.login.dao,com.qf.myemail.dao,com.qf.myleave.dao,com.qf.mynews.dao,com.qf.myproducts.dao,com.qf.myuser.dao,com.qf.reg.dao"></property>
+              <property name="basePackage" value="com.qf.*.dao"></property>
               <!-- 引入sqlSessionFacotry -->
               <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
        </bean>

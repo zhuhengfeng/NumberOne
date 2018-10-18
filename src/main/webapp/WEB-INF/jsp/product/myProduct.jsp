@@ -351,29 +351,27 @@
     <a class='navbar-brand' href='/'><i class='icon-home'></i></a>
   </div>
   <div class='collapse navbar-collapse' id='navbarCollapse' style='margin-top:16px;'>
-    <ul class='nav navbar-nav'>
-      <li class='nav-system-home'><a href='${pageContext.request.contextPath}/index' style="line-height:0px;padding-top:26px;padding-bottom:30px;">首页</a>
-      </li>
+    <ul class='nav navbar-nav' style="display: inline">
+      <li class='nav-system-home'><a href='${pageContext.request.contextPath}/index' style="line-height:0px;padding-top:26px;padding-bottom:30px;">首页</a></li>
       <li class="dropdown ">
-        <a href='' class="dropdown-toggle" style="line-height:0px" data-toggle="dropdown" >心路历程 <b class='caret' style=''></b></a>
+        <a href='' class="nav-article-0" style="line-height:0px" data-toggle="dropdown" >心路历程 <b class='caret' style=''></b></a>
         <ul class='dropdown-menu' role='menu'>
           <li class='nav-system-company'><a href='${pageContext.request.contextPath}/news' >忆往昔</a>
           </li>
           <li class='nav-page-2'><a href='${pageContext.request.contextPath}/news' >看今朝</a>
           </li>
-
+        </ul>
       </li>
       <!-- end nav2 -->
-    </ul>
-    <li class='nav-article-0'><a href='${pageContext.request.contextPath}/product' style="line-height:0px;padding-top:26px;padding-bottom:30px;">产品介绍</a>
-    </li>
-    <li class='nav-article-0'><a href='${pageContext.request.contextPath}/product' style="line-height:0px;padding-top:26px;padding-bottom:30px;">网络调查</a>
-    </li>
-    <li class='nav-page-8'><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">招贤纳士</a>
-    </li>
-    <li class='nav-page-8'><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">购物车</a>
-    </li>
-    <!-- end nav1 -->
+      <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">产品介绍</a>
+      </li>
+      <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">网络调查</a>
+      </li>
+      <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">招贤纳士</a>
+      </li>
+      <li ><a href='${pageContext.request.contextPath}/JoinUs' style="line-height:0px;padding-top:26px;padding-bottom:30px;">购物车</a>
+      </li>
+      <!-- end nav1 -->
     </ul>
   </div>
 </nav>

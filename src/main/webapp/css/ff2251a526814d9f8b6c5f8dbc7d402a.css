@@ -1,0 +1,12 @@
+﻿@font-face {
+  font-family: 'Marck Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Marck Script'), local('MarckScript-Regular'), url(../fonts/nwpttk2ongba3or78gapdwuyycg6.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen Regular'), local('Oxygen-Regular'), url(../fonts/2sdfzg1wl4lcnbukjk0j.ttf) format('truetype');
+}
