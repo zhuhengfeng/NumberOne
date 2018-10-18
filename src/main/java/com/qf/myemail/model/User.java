@@ -2,57 +2,71 @@ package com.qf.myemail.model;
 
 public class User {
 
-    private String name;
-    private int id;
-    private int price;
-    private String cdate;
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-	/**
-	 * @return the id
-	 */
-	public int getId() {
+    private  Integer id;
+    private String mail;
+    private String telephone;
+    private String qq;
+    private String title;
+    private String comment;
+
+	public Integer getId() {
 		return id;
 	}
-	/**
-	 * @param id the id to set
+
+	/**idint(11) NOT NULL主键
+	 mailvarchar(25) NULL邮箱
+	 telephoneint(21) NULL手机号
+	 QQvarchar(21) NULLqq号
+	 titlevarchar(250) NULL建议标题
+	 commentvarchar(250) NULL建议内容
+	 * @return the name
 	 */
-	public void setId(int id) {
+
+
+	public String getMail() {
+		return mail;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+
+	public String getQq() {
+		return qq;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+
+	public void setId(Integer id) {
 		this.id = id;
 	}
-	/**
-	 * @return the price
-	 */
-	public int getPrice() {
-		return price;
+
+	public void setQq(String qq) {
+		this.qq = qq;
 	}
-	/**
-	 * @param price the price to set
-	 */
-	public void setPrice(int price) {
-		this.price = price;
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	/**
-	 * @return the cdate
-	 */
-	public String getCdate() {
-		return cdate;
+
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
-	/**
-	 * @param cdate the cdate to set
-	 */
-	public void setCdate(String cdate) {
-		this.cdate = cdate;
-	}
-	
 }

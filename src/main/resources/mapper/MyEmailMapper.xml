@@ -4,5 +4,40 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.qf.myemail.dao.MyEmailMapper">
+    <select  id="countUser" resultType="java.lang.Integer" >
+        select count(*) from tb_mail
+        <where>
+            <if test="search !=null and search !=''">
+                title like '%${search}%'
+            </if>
+        </where>
+    </select>
+
+    <select id="listUser" resultType="User">
+        select * from tb_mail where title like '%${search}%' limit #{offset},#{limit}
+
+    </select>
+
+    <insert id="insertUser" parameterType="User">
+        insert into tb_mail (mail,telephone,qq,title,comment) values(#{mail},#{telephone},#{qq},#{title},#{comment})
+
+    </insert>
+
+    <delete id="deleteById" >
+
+        delete from tb_mail where id = #{id}
+
+    </delete>
+
+    <update id="changeById" parameterType="User">
+
+        update tb_mail set mail=#{mail},telephone=#{telephone},qq=#{qq},title=#{title},comment=#{comment} where id=#{id}
+    </update>
+
+    <select id="findUserById" resultType="User">
+
+        select * from tb_mail where id=#{id}
+
+    </select>
 
 </mapper>
