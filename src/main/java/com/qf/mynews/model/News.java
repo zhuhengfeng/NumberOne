@@ -2,7 +2,7 @@ package com.qf.mynews.model;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.xml.crypto.Data;
+import java.util.Date;
 
 /**
  * Created by asus on 2018/10/16.
@@ -10,8 +10,9 @@ import javax.xml.crypto.Data;
 public class News {
     private int id;
     private String newstitle;
+
     @DateTimeFormat(pattern="yyyy-MM-dd")
-    private Data newsdate;
+    private Date newsdate;
     private String newsimg;
 
     public int getId() {
@@ -30,11 +31,11 @@ public class News {
         this.newstitle = newstitle;
     }
 
-    public Data getNewsdate() {
+    public Date getNewsdate() {
         return newsdate;
     }
 
-    public void setNewsdate(Data newsdate) {
+    public void setNewsdate(Date newsdate) {
         this.newsdate = newsdate;
     }
 

@@ -32,4 +32,19 @@ public class NewsService implements INewsService{
 		// TODO Auto-generated method stub
 		return map.selectbylimit(jsonobject);
 	}
+	@Override
+	public int addnews(News news)throws Exception{
+		int i= map.insertnews(news);
+		return i;
+	}
+	@Override
+	public int removenews(News news)throws Exception{
+		int i=map.deletenews(news);
+		return i;
+	}
+	@Override
+	public int changenews(News news)throws Exception{
+		int i=map.updatenews(news);
+		return i;
+	}
 }

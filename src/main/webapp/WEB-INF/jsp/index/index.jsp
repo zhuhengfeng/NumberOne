@@ -335,7 +335,8 @@
       </div>
     </div>
   </header>
-  <style>#block12{}#block12 .panel-heading{}</style>    <nav id='navbar' class='navbar' role='navigation'>
+  <style>#block12{}#block12 .panel-heading{}</style>
+  <nav id='navbar' class='navbar' role='navigation'>
   <div class='navbar-header'>
     <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#navbarCollapse'>
       <span class='icon-bar'></span>

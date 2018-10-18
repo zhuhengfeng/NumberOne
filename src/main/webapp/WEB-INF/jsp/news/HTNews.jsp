@@ -11,7 +11,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title>686 Adminize</title>
+  <title>NumberOne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -39,61 +39,27 @@
 
       <div class="main-left-col">
 
-        <h1><i class="icon-shopping-cart icon-large"></i> Adminize</h1>
+        <h1><i class="icon-shopping-cart icon-large"></i> NumberOne</h1>
 
         <ul class="side-nav">
 
           <li class="active">
-            <a href="index.html"><i class="icon-home"></i> Dashboard</a>
+            <a href="index.html"><i class="icon-home"></i> 首页</a>
           </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="collapse" data-target="#website-dropdown" href="#"><i class="icon-sitemap"></i> Website <b class="caret"></b></a>
-            <ul id="website-dropdown" class="collapse">
-              <li><a href="listing.html">Pages</a></li>
-              <li><a href="listing.html">Menus</a></li>
-            </ul>
+          <li class="active">
+            <a href="#"><i class="icon-sitemap"></i> 新闻资讯 <b class="caret"></b></a>
           </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="collapse" data-target="#store-dropdown" href="#"><i class="icon-shopping-cart"></i> Store <b class="caret"></b></a>
-            <ul id="store-dropdown" class="collapse">
-              <li><a href="listing.html">Catalogue</a></li>
-              <li><a href="orders.html">Orders</a></li>
-              <li><a href="listing.html">Enquiries</a></li>
-            </ul>
+          <li class="active">
+            <a href="#"><i class="icon-shopping-cart"></i> 产品介绍 <b class="caret"></b></a>
           </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="collapse" data-target="#reports-dropdown" href="#"><i class="icon-signal"></i> Reports <b class="caret"></b></a>
-            <ul id="reports-dropdown" class="collapse">
-              <li><a href="report.html">Sales Reports</a></li>
-              <li><a href="report.html">Product Popularity</a></li>
-              <li><a href="report.html">Member Registrations</a></li>
-            </ul>
+          <li class="active">
+            <a href="#"><i class="icon-signal"></i> 网络调查 <b class="caret"></b></a>
           </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="collapse" data-target="#members-dropdown" href="#"><i class="icon-group"></i> Members <b class="caret"></b></a>
-            <ul id="members-dropdown" class="collapse">
-              <li><a href="listing.html">Members</a></li>
-              <li><a href="listing.html">User Groups</a></li>
-              <li><a href="listing.html">Permissions</a></li>
-            </ul>
+          <li class="active">
+            <a href="#"><i class="icon-group"></i> 招贤纳士 <b class="caret"></b></a>
           </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="collapse" data-target="#settings-dropdown" href="#"><i class="icon-cogs"></i> Settings <b class="caret"></b></a>
-            <ul id="settings-dropdown" class="collapse">
-              <li><a href="listing.html">Payment Processors</a></li>
-              <li><a href="listing.html">Order Statuses</a></li>
-              <li><a href="listing.html">Shipping Methods</a></li>
-              <li><a href="listing.html">Emails</a></li>
-            </ul>
-          </li>
-          <li><a href="#"><i class="icon-bullhorn"></i> Alerts <span class="badge badge-warning">2</span></a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="collapse" data-target="#help-dropdown" href="#"><i class="icon-info-sign"></i> Help <b class="caret"></b></a>
-            <ul id="help-dropdown" class="collapse">
-              <li><a href="content.html">FAQ</a></li>
-              <li class="active"><a href="content.html">User Guide</a></li>
-              <li><a href="content.html">Support</a></li>
-            </ul>
+          <li class="active">
+            <a href="#"><i class="icon-group"></i> 人员管理 <b class="caret"></b></a>
           </li>
         </ul>
 
@@ -123,9 +89,9 @@
 
         <ul class="breadcrumb">
           <li>
-            <a href="#">Admin</a> <span class="divider">/</span>
+            <a href="#">NumberOne</a> <span class="divider">/</span>
           </li>
-          <li class="active">Dashboard</li>
+          <li class="active">后台管理系统</li>
         </ul>
 
       </div>
@@ -150,15 +116,15 @@
                         添加新闻
                       </h4>
                     </div>
+                    <form id="addtable" enctype="multipart/form-data" method="post" action="${pageContext.request.contextPath}/user">
                     <div class="modal-body">
-                      <form action="#" method="post" id="addtable" >
+                       <%-- <div><input type="hidden" name="_method" value="POST"></div>--%>
                         <div>Title:</div>
-                        <div><input type="text" name="title"></div>
+                        <div><input type="text" name="newstitle"></div>
                         <div>Date:</div>
-                        <div><input type="text" name="date"></div>
-                        <div>Img:</div>
-                        <div><input type="text" name="img"></div>
-                      </form>
+                        <div><input type="date" name="newsdate"></div>
+                       <div>Img:</div>
+                        <div><input type="file" name="img"></div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">关闭
@@ -166,7 +132,9 @@
                       <button type="submit" class="btn btn-primary" id="addtable_submit">
                         提交更改
                       </button>
+
                     </div>
+                    </form>
                   </div><!-- /.modal-content -->
                 </div><!-- /.modal -->
               </div>
@@ -183,17 +151,19 @@
                         修改新闻
                       </h4>
                     </div>
+                    <form  id="updatetable" enctype="multipart/form-data" method="post" action="${pageContext.request.contextPath}/updatenews" >
                     <div class="modal-body">
-                      <form action="#" method="post" id="updatetable">
-                        <div>ID:</div>
-                        <div><input type="text" name="id" id="updateid" readonly="readonly"></div>
-                        <div>Title:</div>
-                        <div><input type="text" name="name" id="updatetitle"></div>
-                        <div>Date:</div>
-                        <div><input type="text" name="price" id="updatedate"></div>
-                        <div>Img:</div>
-                        <div><input type="text" name="cdate" id="updateimg"></div>
-                      </form>
+                      <input type="hidden" name="_method" value="PUT">
+
+                      <div>ID:</div>
+                      <div><input type="text" name="id" id="updateid" readonly="readonly"></div>
+                      <div>Title:</div>
+                      <div><input type="text" name="newstitle" id="updatetitle"></div>
+                      <div>Date:</div>
+                      <div><input type="date" name="newsdate" id="updatedate"></div>
+                      <div>Img:</div>
+                      <div><input type="file" name="img" id="updateimg"></div>
+
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-default" data-dismiss="modal">关闭
@@ -202,6 +172,7 @@
                         提交更改
                       </button>
                     </div>
+                    </form>
                   </div><!-- /.modal-content -->
                 </div><!-- /.modal -->
               </div>
@@ -230,7 +201,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
 <script type="text/javascript">
-      $(function(){
+
+  $(function(){
+
         $('#newsTable').bootstrapTable({
 
           url: 'news',
@@ -254,7 +227,10 @@
             title: 'Title'
           }, {
             field: 'newsdate',
-            title: 'Date'
+            title: 'Date',
+            formatter:function(value,row,index){
+              return changeDateFormat(value)
+            }
           }, {
             field:"newsimg",
             title:"Img",
@@ -273,69 +249,96 @@
           striped: true,
           clickToSelect: true,
         });
- /*       $(function(){
-          $("#addtable").validate({
-            rules:{
-              "title":{required:true},
-              "date":{required:true},
-              "img":{required:true},
-            },
-            messages:{
-              "title":{required:"标题不能为空"},
-              "date":{required:"日期不能为空"},
-              "img":{required:"图片不能为空"},
-            },
-            submitHandler:function(){
-              var submit_url = "${pageContext.request.contextPath}/add.do";
-              $.ajax({
-                url: submit_url,   // 提交的页面
-                data: $('#addtable').serialize(), // 从表单中获取数据
-                type: "POST",                   // 设置请求类型为"POST"，默认为"GET"
-                success: function(data) {
-                  alert("提交成功");
-
-                }
-              });
-              $("#myModal").modal('hide');  //提交成功后隐藏模态框
-            }
-          });
-          $("#btn1").click(function(){
-            var dataArr=$('#sampleTable').bootstrapTable('getSelections');
-            var t=dataArr[0].newstitle;
-            var p=dataArr[0].newsimg;
-            var i=dataArr[0].id;
-            var d=dataArr[0].newsdate;
-            $("#updatetitle").val(t);
-            $("#updateimg").val(p);
-            $("#updateid").val(i);
-            $("#updatedate").val(d);
-          });
-          $("#updatetable").validate({
-            rules:{
-              "updatetitle":{required:true},
-              "updatedate":{required:true},
-              "updateimg":{required:true},
-            },
-            messages:{
-              "updatetitle":{required:"姓名不能为空"},
-              "updatedate":{required:"收入不能为空"},
-              "updateimg":{required:"日期不能为空"},
-            },
-            submitHandler:function(){
-              var submit_url = "${pageContext.request.contextPath}/update.do";
-              jQuery.ajax({
-                url: submit_url,   // 提交的页面
-                data: $('#updatetable').serialize(), // 从表单中获取数据
-                type: "POST",                   // 设置请求类型为"POST"，默认为"GET"
-                success: function(data) {
-                  alert("提交成功");
-                  $('#sampleTable').bootstrapTable('refresh',{url:'users'});
-                }
-              });
-              $("#myModal1").modal('hide');  //提交成功后隐藏模态框
-            }
-          });*/
       })
+  $("#btn1").click(function(){
+    var dataArr=$('#newsTable').bootstrapTable('getSelections');
+    var n=dataArr[0].newstitle;
+    var p=changeDateFormat1(dataArr[0].newsdate);
+
+    var i=dataArr[0].id;
+    var d=dataArr[0].newsimg;
+    $("#updatetitle").val(n);
+    $("#updatedate").val(p);
+    $("#updateid").val(i);
+    $("#updateimg").val(d);
+  });
+
+    $("#addtable").validate({
+      rules: {
+        "newstitle": {required: true},
+        "newsdate": {required: true},
+        "img":{required: true}
+      },
+      messages: {
+        "newstitle": {required: "<font color='red'>标题不能为空</font>"},
+        "newsdate": {required: "<font color='red'>日期不能为空</font>"},
+        "img":{required: "<font color='red'>文件不能为空</font>"}
+      },
+    })
+  $("#updatetable").validate({
+    rules: {
+      "newstitle": {required: true},
+      "newsdate": {required: true},
+      "img":{required: true}
+    },
+    messages: {
+      "newstitle": {required: "<font color='red'>标题不能为空</font>"},
+      "newsdate": {required: "<font color='red'>日期不能为空</font>"},
+      "img":{required: "<font color='red'>文件不能为空</font>"}
+    },
+  })
+
+  $("#btn3").click(function(){
+    if(confirm("确认删除?")){
+      var dataArr=$('#newsTable').bootstrapTable('getSelections');
+      var id=dataArr[0].id;
+      alert(id);
+      $.post(
+              'delete/' +id,
+              {'_method': 'DELETE'},
+              function (data) {
+                if (data > 0) {
+                  $('#newsTable').bootstrapTable(('refresh'));
+                }
+              }
+      );
+    }
+  });
+  function changeDateFormat(cellval) {
+      var dateVal = cellval + "";
+      if (cellval != null) {
+        var date = new Date(parseInt(dateVal.replace("/Date(", "").replace(")/", ""), 10));
+        var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+        var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+
+        var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+        var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+        var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+
+        return date.getFullYear() + "-" + month + "-" + currentDate + " " + hours + ":" + minutes + ":" + seconds;
+      }
+      else{
+        alert(null);
+      }
+
+  }
+  function changeDateFormat1(cellval) {
+    var dateVal = cellval + "";
+    if (cellval != null) {
+      var date = new Date(parseInt(dateVal.replace("/Date(", "").replace(")/", ""), 10));
+      var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+      var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+
+      var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+      var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+      var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+
+      return date.getFullYear() + "-" + month + "-" + currentDate;
+    }
+    else {
+      alert(null);
+    }
+  }
 </script>
 
 </body>

@@ -13,4 +13,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <select id="selectbylimit" resultType="News">
         select * from tb_news where newstitle like "%${search}%" limit #{offset},#{limit}
     </select>
+    <insert id="insertnews" parameterType="News">
+        insert into tb_news(newstitle,newsdate,newsimg) values(#{newstitle},#{newsdate},#{newsimg})
+    </insert>
+    <delete id="deletenews" parameterType="News">
+        delete from tb_news where id=#{id}
+    </delete>
+    <update id="updatenews" parameterType="News">
+        update  tb_news set newstitle=#{newstitle},newsdate=#{newsdate},newsimg=#{newsimg} where id=#{id}
+    </update>
 </mapper>
